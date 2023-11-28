@@ -17,7 +17,7 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,md,mdx}\" --cache",
-    "tsup": "cross-env NODE_OPTIONS=\"--max-old-space-size=3096\" tsup",
+    "tsup": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" tsup",
     "tsup:watch": "tsup --watch",
     "tailwind": "npx tailwindcss -i ./src/globals.css  -o dist/styles.css",
     "tailwind:watch": "npm run tailwind -- --watch",
