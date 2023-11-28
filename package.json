@@ -1,6 +1,6 @@
 {
   "name": "@paalan/tailwind-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a collection of React components and hooks that used tailwindcss as CSS framework.",
   "type": "module",
   "main": "dist/index.cjs",
