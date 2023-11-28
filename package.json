@@ -260,7 +260,7 @@
   "bugs": {
     "url": "https://github.com/paalamugan/paalan-tailwind-ui/issues"
   },
-  "homepage": "https://github.com/paalamugan/paalan-tailwind-ui#readme",
+  "homepage": "https://github.com/paalamugan/paalan-tailwind-ui#README",
   "files": [
     "dist"
   ],
