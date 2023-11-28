@@ -4,7 +4,7 @@ module.exports = {
     commitMessage: 'chore: release v${version}',
   },
   hooks: {
-    'before:init': ['git pull', 'npm run build', 'npm run test'],
+    'before:init': ['git pull', 'npm run type-check', 'npm run lint', 'npm run test', 'npm run build:package'],
     'after:bump': 'npx auto-changelog -p',
   },
   github: {
