@@ -1,0 +1,59 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    name: Build with Node ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: '.npm'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build:package
+  test:
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    name: Run all tests
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Retrieve Git history, needed to verify commits in PRs
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: '.npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - if: github.event_name == 'pull_request'
+        name: Validate all commits from PR
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+      - name: Type checking
+        run: npm run type-check
+
+      - name: Linter
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm run test

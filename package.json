@@ -39,7 +39,8 @@
     "preview:docs": "npm run storybook:build:docs && serve storybook-static",
     "commit": "cz",
     "validate": "npm run build && npm run storybook:build && npm run test",
-    "release": "release-it"
+    "release": "release-it",
+    "release:version": "npm run release -- --only-version"
   },
   "dependencies": {
     "@azure/msal-browser": "^3.5.0",
