@@ -1,8 +1,8 @@
-import { CracoConfig } from '@craco/types';
+import type { CracoConfig } from '@craco/types';
 
 const cracoConfig: CracoConfig = {
   webpack: {
-    configure: (webpackConfig, { env, paths }) => {
+    configure: (webpackConfig) => {
       if (!webpackConfig.module) {
         webpackConfig.module = {
           rules: [],
