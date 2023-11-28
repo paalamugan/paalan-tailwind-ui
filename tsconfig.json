@@ -19,6 +19,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "@types", ".storybook/**/*"],
+  "include": ["src", "@types", ".storybook"],
   "exclude": ["dist", "node_modules"]
 }
