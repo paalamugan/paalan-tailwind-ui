@@ -1,7 +1,7 @@
 {
   "name": "@paalan/tailwind-ui",
   "version": "1.0.0",
-  "description": "A React UI library built with Tailwind CSS and Typescript",
+  "description": "This is a collection of React components and hooks that used tailwindcss as CSS framework.",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
