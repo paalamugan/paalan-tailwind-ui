@@ -1,0 +1,41 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-event-listener.stories';
+
+<Meta of={allStories} />
+
+# useEventListener
+
+`useEventListener` is a React hook that allows you to attach event listeners to the document.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - Within Specific Area
+
+<Canvas of={allStories.UsageWithinTheBox} />
+
+### Code - Within Specific Area
+
+<Source of={allStories.UsageWithinTheBox} />
+
+## Parameters
+
+- `eventType` - The event type to listen for.
+- `handler` - The event handler to attach to the event.
+- `options` - An object containing options to pass to the event listener.
+  - `capture` - A boolean indicating whether the event should be captured.
+  - `passive` - A boolean indicating whether the event should be passive.
+  - `once` - A boolean indicating whether the event should only be fired once.
+- `target` - The target element to attach the event listener to. Defaults to `window`.
+
+## Returns
+
+`useEventListener` returns a mutable ref object that can be attached to a React component.

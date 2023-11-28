@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-subscription.stories';
+
+<Meta of={allStories} />
+
+# useSubscription
+
+`useSubscription` is a React hook that allows you to subscribe to a value from a [Zen Observable](https://www.npmjs.com/package/zen-observable-ts) package.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useSubscription` accepts two parameters:
+
+- `options` - An object containing the following properties:
+
+  - `onInitialize` - A function that returns an array of Observables or a single Observable. These Observables will be subscribed to when the component mounts.
+  - `onSuccess` - A function that will be called when all the Observables from `onInitialize` have emitted at least once.
+  - `onError` - An optional function that will be called if any of the Observables from `onInitialize` emit an error.
+  - `isUnSubscribedAfterResponse` - If `true`, the Observables from `onInitialize` will be unsubscribed from after `onSuccess` or `onError` is called. Defaults to `false`.
+
+- `deps` - An array of dependencies. If any of the dependencies change, the Observables from `onInitialize` will be unsubscribed from and resubscribed to.
+
+## Returns
+
+`useSubscription` returns nothing.

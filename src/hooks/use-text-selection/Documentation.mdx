@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-text-selection.stories';
+
+<Meta of={allStories} />
+
+# useTextSelection
+
+`useTextSelection` is a React hook that allows you to get and set the current text selection in a DOM element. It is useful for building rich text editors.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useTextSelection` does not take any parameters.
+
+## Returns
+
+`useTextSelection` returns the current text `Selection` object, or `null` if there is no text selection.

@@ -1,0 +1,57 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-local-storage.stories';
+
+<Meta of={allStories} />
+
+# useLocalStorage
+
+`useLocalStorage` is a React hook that syncs a value to localStorage. It returns a tuple of the current value and a setter function. The setter function updates both the local state and localStorage.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - SerializeJson
+
+<Canvas of={allStories.SerializeJson} />
+
+### Code - SerializeJson
+
+<Source of={allStories.SerializeJson} />
+
+### Example - SerializeBoolean
+
+<Canvas of={allStories.SerializeBoolean} />
+
+### Code - SerializeBoolean
+
+<Source of={allStories.SerializeBoolean} />
+
+### Example - MultipleHooks
+
+<Canvas of={allStories.MultipleHooks} />
+
+### Code - MultipleHooks
+
+<Source of={allStories.MultipleHooks} />
+
+## Parameters
+
+`Options` - An optional object that can be passed to `useLocalStorage` to configure its behavior.
+
+- `key` - Storage key
+- `defaultValue` - Default value that will be set if value is not found in storage
+- `getInitialValueInEffect` - If set to true, value will be updated in useEffect after mount
+- `serialize` - Function to serialize value into a string to be saved in storage
+- `deserialize` - Function to deserialize string value from storage to value
+
+## Returns
+
+`useLocalStorage` returns a tuple of the current value and a setter function. The setter function updates both the local state and localStorage.

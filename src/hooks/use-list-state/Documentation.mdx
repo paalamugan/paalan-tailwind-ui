@@ -1,0 +1,51 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-list-state.stories';
+
+<Meta of={allStories} />
+
+# useListState
+
+`useListState` is a hook that manages a list of items. It is similar to `useState` but for lists. It returns an array of items and a set of functions to manipulate the list. It is useful for managing a list of items in a form.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - IndeterminateCheckbox
+
+<Canvas of={allStories.IndeterminateCheckbox} />
+
+### Code - IndeterminateCheckbox
+
+<Source of={allStories.IndeterminateCheckbox} />
+
+## Parameters
+
+`useListState` accepts an optional initial value. If no initial value is provided, the list will be empty.
+
+## Returns
+
+`useListState` returns an array containing the following items:
+
+- `state` is an array of items in the list.
+- `object` - An object containing the following functions:
+  - `setState` - Sets the state of the list.
+  - `append` - Appends an item to the end of the list.
+  - `prepend` - Prepends an item to the beginning of the list.
+  - `insert` - Inserts an item at a given index.
+  - `pop` - Removes the last item from the list.
+  - `shift` - Removes the first item from the list.
+  - `apply` - Applies a function to each item in the list.
+  - `applyWhere` - Applies a function to each item in the list where the predicate returns true.
+  - `remove` - Removes an item from the list.
+  - `reorder` - Reorders the list.
+  - `setItem` - Sets an item at a given index.
+  - `setItemProp` - Sets a property of an item at a given index.
+  - `filter` - Filters the list.

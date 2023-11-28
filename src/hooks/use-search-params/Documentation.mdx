@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-search-params.stories';
+
+<Meta of={allStories} />
+
+# useSearchParams
+
+`useSearchParams` is a React hook that returns a `URLSearchParams` object for the current URL. It will update when the URL changes.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useSearchParams` accepts no parameters.
+
+## Returns
+
+`useSearchParams` returns a `URLSearchParams` object for the current URL.

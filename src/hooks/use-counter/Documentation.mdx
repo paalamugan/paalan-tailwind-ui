@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-counter.stories';
+
+<Meta of={allStories} />
+
+# useCounter
+
+`useCounter` is a React hook that provides a counter and a set of functions to manipulate it. It is useful for creating a counter that can be incremented, decremented, reset, or set to a specific value.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `initialValue` (number) - The initial value of the counter. Defaults to `0`.
+- `options` - An object containing options for the hook.
+  - `min` (number) - The minimum value of the counter. Defaults to `-Infinity`.
+  - `max` (number) - The maximum value of the counter. Defaults to `Infinity`.
+
+## Returns
+
+`useCounter` returns a tuple containing the current count and an object with increment, decrement, set and reset functions.
+
+- `value` (number) - The current value of the counter.
+- `increment` (function) - A function that increments the counter by a given amount. If no amount is provided, the counter is incremented by `1`.
+- `decrement` (function) - A function that decrements the counter by a given amount. If no amount is provided, the counter is decremented by `1`.
+- `reset` (function) - A function that resets the counter to its initial value.
+- `set` (function) - A function that sets the counter to a given value.

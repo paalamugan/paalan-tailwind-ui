@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-hover.stories';
+
+<Meta of={allStories} />
+
+# useHover
+
+`useHover` is a React hook that tracks whether a component is being hovered over.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useHover` accepts the no parameters.
+
+## Returns
+
+`useHover` returns a object with the following properties:
+
+- `hovered` - a boolean indicating whether the component is being hovered over
+- `ref` - a React ref that should be attached to the component's root element

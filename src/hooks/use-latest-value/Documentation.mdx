@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-latest-value.stories';
+
+<Meta of={allStories} />
+
+# useLatestValue
+
+`useLatestValue` is a hook that returns the latest value of a variable. It is useful for getting the latest value of a variable in a callback.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useLatestValue` takes a single parameter, the value to track.
+
+## Returns
+
+`useLatestValue` returns the latest value of the variable passed in.

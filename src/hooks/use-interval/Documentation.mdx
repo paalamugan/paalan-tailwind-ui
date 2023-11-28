@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-interval.stories';
+
+<Meta of={allStories} />
+
+# useInterval
+
+`useInterval` is a React hook that sets up an interval and cleans it up when the component unmounts. It's a wrapper around `setInterval` and `clearInterval`.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useInterval` accepts a three parameter:
+
+- `fn` - a function to be called every `delay` milliseconds
+- `delay` - the number of milliseconds to wait between calls to `fn`
+- `options` - an optional object with the following properties:
+  - `immediate` - a boolean indicating whether to call `fn` immediately on mount
+
+## Returns
+
+`useInterval` returns an object with the following properties:
+
+- `start` - a function that starts the interval
+- `stop` - a function that stops the interval
+- `toggle` - a function that toggles the interval
+- `active` - a boolean indicating whether the interval is active

@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-eye-dropper.stories';
+
+<Meta of={allStories} />
+
+# useEyeDropper
+
+`useEyeDropper` is a React hook that allows you to get the color of a pixel on the screen.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useEyeDropper` accepts no parameters.
+
+## Returns
+
+`useEyeDropper` returns an object with the following properties:
+
+- `supported` - A boolean indicating whether the browser supports the `getPixelColor` API.
+- `open` - A function that opens the eye dropper.

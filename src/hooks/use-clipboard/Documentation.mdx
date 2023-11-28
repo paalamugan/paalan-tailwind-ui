@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-clipboard.stories';
+
+<Meta of={allStories} />
+
+# useClipboard
+
+`useClipboard` is a React hook that copies text to the clipboard. It returns a `copy` function that takes a string to copy to the clipboard. It also returns a `copied` boolean that indicates whether the copy was successful.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`Options` - An optional object that can be passed to `useClipboard` to configure its behavior.
+
+- `timeout` - The number of milliseconds to wait before resetting the `copied` boolean to `false`. Defaults to `2000`.
+
+## Returns
+
+`useClipboard` returns an object with the following properties:
+
+- `copy` - A function that takes a string to copy to the clipboard.
+- `copied` - A boolean that indicates whether the copy was successful. This boolean is reset to `false` after the number of milliseconds specified by the `timeout` option.
+- `reset` - A function that resets the `copied` boolean to `false`.
+- `error` - An error that occurred during the copy process.
+- `hasCopied` - A boolean that indicates whether the copy was successful.
+- `paste` - A function that returns the text that was copied to the clipboard.

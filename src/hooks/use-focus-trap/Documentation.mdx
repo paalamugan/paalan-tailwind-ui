@@ -1,0 +1,43 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-focus-trap.stories';
+
+<Meta of={allStories} />
+
+# useFocusTrap
+
+`useFocusTrap` is a React hook that traps focus within a specified element. It returns a function that returns focus to the last active element.
+
+## Usage
+
+### Example - With FocusTrap Enabled
+
+<Canvas of={allStories.UsageWithFocusTrapEnabled} />
+
+### Code - With FocusTrap Enabled
+
+<Source of={allStories.UsageWithFocusTrapEnabled} />
+
+### Example - With FocusTrap Disabled
+
+<Canvas of={allStories.UsageWithFocusTrapDisabled} />
+
+### Code - With FocusTrap Disabled
+
+<Source of={allStories.UsageWithFocusTrapDisabled} />
+
+### Example - With Initial Focus
+
+<Canvas of={allStories.UsageWithInitialFocus} />
+
+### Code - With Initial Focus
+
+<Source of={allStories.UsageWithInitialFocus} />
+
+## Parameters
+
+- `active` - Whether or not the focus trap is active. Defaults to `true`.
+
+## Returns
+
+`useFocusTrap` returns a function that returns focus to the last active element.

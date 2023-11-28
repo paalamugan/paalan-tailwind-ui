@@ -1,0 +1,32 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-headroom.stories';
+
+<Meta of={allStories} />
+
+# useHeadroom
+
+`useHeadroom` hook to create headers that are hidden after user scrolls past the given distance in px. The hook returns a boolean value that determines whether the element should be pinned or hidden. Hook returns true when the current scroll position is less than the specified `fixedAt` value and after user scrolled up.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useHeadroom` accepts an object with the following properties:
+
+- `fixedAt` - distance in px after which the element should be hidden
+- `onPin` - callback function that is called when the element is pinned
+- `onFix` - callback function that is called when the element is fixed
+- `onRelease` - callback function that is called when the element is released
+
+## Returns
+
+`useHeadroom` return an boolean value that determines whether the element should be pinned or hidden.

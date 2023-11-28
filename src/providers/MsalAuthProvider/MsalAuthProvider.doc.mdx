@@ -1,0 +1,113 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './MsalAuthProvider.stories.tsx';
+
+<Meta of={allStories} />
+
+# MsalAuthProvider
+
+This provider is used to authenticate users with Microsoft's Azure Active Directory using the [@azure/msal-react
+](https://www.npmjs.com/package/@azure/msal-react) library.
+
+## Usage
+
+### Example - Without React Router
+
+<Canvas of={allStories.WithoutReactRouter} sourceState="none" />
+
+### Code - Without React Router
+
+```jsx
+import { Button, Code } from '@paalan/tailwind-ui/components';
+import { Box, Heading, Stack } from '@paalan/tailwind-ui/layouts';
+import { MsalAuthProvider, useMsalAuth } from '@paalan/tailwind-ui/providers';
+
+const Home = () => {
+  const { isLoggedIn, user, signIn, signOut } = useMsalAuth();
+  const onClick = () => {
+    if (isLoggedIn) {
+      signOut();
+    } else {
+      signIn();
+    }
+  };
+
+  return (
+    <Stack gap="4">
+      <Heading as="h3">{isLoggedIn ? 'User is logged in' : 'User is not logged in'}</Heading>
+      {isLoggedIn && <Code className="whitespace-pre-wrap">{JSON.stringify(user, null, 2)}</Code>}
+      <Button onClick={onClick}>Click here to {isLoggedIn ? 'Sign Out' : 'Sign In'}</Button>
+    </Stack>
+  );
+};
+const App = () => {
+  const clientId = 'XXXXXX-XXXX-XXXX-XXXX-XXXXXXX'; // Replace with your own client ID
+  const tenantId = 'XXXXXX-XXXX-XXXX-XXXX-XXXXXXX'; // Replace with your own tenant ID
+  return (
+    <MsalAuthProvider clientId={clientId} tenantId={tenantId} isPopupAuthenticationFlow>
+      <Home />
+    </MsalAuthProvider>
+  );
+};
+```
+
+### Example - With React Router
+
+<Canvas of={allStories.WithReactRouter} sourceState="none" />
+
+### Code - With React Router
+
+```jsx
+import { Button, Code, ErrorRouterBoundary } from '@paalan/tailwind-ui/components';
+import { Box, Heading, Stack } from '@paalan/tailwind-ui/layouts';
+import { AuthenticatedRoute, MsalAuthProvider, useMsalAuth } from '@paalan/tailwind-ui/providers';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+
+const Home = () => {
+  const { isLoggedIn, user, signIn, signOut } = useMsalAuth();
+  const onClick = () => {
+    if (isLoggedIn) {
+      signOut();
+    } else {
+      signIn();
+    }
+  };
+
+  return (
+    <Stack gap="4">
+      <Heading as="h3">{isLoggedIn ? 'User is logged in' : 'User is not logged in'}</Heading>
+      {isLoggedIn && <Code className="whitespace-pre-wrap">{JSON.stringify(user, null, 2)}</Code>}
+      <Button onClick={onClick}>Click here to {isLoggedIn ? 'Sign Out' : 'Sign In'}</Button>
+    </Stack>
+  );
+};
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" errorElement={<ErrorRouterBoundary />}>
+      {/* Authenticated route */}
+      <Route element={<AuthenticatedRoute />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Box>Dashboard</Box>} />
+      </Route>
+      {/* Unauthenticated route */}
+      <Route path="/signin" element={<Box>Sign In</Box>} />
+      <Route path="/signout" element={<Box>Sign Out</Box>} />
+    </Route>,
+  ),
+);
+
+const App = () => {
+  const clientId = 'XXXXXX-XXXX-XXXX-XXXX-XXXXXXX'; // Replace with your own client ID
+  const tenantId = 'XXXXXX-XXXX-XXXX-XXXX-XXXXXXX'; // Replace with your own tenant ID
+  return (
+    <MsalAuthProvider clientId={clientId} tenantId={tenantId}>
+      <RouterProvider router={router} />
+    </MsalAuthProvider>
+  );
+};
+```
+
+## Props
+
+<Controls sort="requiredFirst" exclude={['auth', 'cache', 'system', 'telemetry']} />

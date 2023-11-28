@@ -1,0 +1,41 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-resize-observer.stories';
+
+<Meta of={allStories} />
+
+# useResizeObserver
+
+`useResizeObserver` returns a `ref` object that should be passed to the observed element, and the current element content rect, as returned by `ResizeObserver`'s callback entry.contentRect. See [Resize Observer API](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) documentation to learn more. On the first render (as well as during SSR), or when no element is being observed, all of the properties are equal to `0`.
+
+```tsx
+import { useResizeObserver } from '@paalan/tailwind-ui/hooks';
+
+function Demo() {
+  const [ref, rect] = useResizeObserver();
+  return <div ref={ref}>Observed</div>;
+}
+```
+
+See also [useElementSize](/docs/hooks-ui-and-dom-useelementsize--documentation) hook in case you need to subscribe only to width and height.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useResizeObserver` accepts no parameters.
+
+## Returns
+
+`useResizeObserver` returns an tuple with the following values:
+
+- `ref` - a `ref` object that should be passed to the observed element
+- `contentRect` - the current element content rect, as returned by `ResizeObserver`'s callback entry.contentRect. See [Resize Observer API](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) documentation to learn more.

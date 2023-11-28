@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-update-effect.stories';
+
+<Meta of={allStories} />
+
+# useUpdateEffect
+
+`useUpdateEffect` hook works the same way as `useEffect` but it is not called when component is mounted.
+
+```ts
+import { useUpdateEffect } from '@glidwell/tailwind-ui/hooks';
+
+function Usage() {
+  useUpdateEffect(() => console.log("Won't be called when mounted"), [value]);
+}
+```
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useUpdateEffect` accepts the same parameters as `useEffect`.
+
+## Returns
+
+`useUpdateEffect` returns nothing.

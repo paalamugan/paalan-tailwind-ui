@@ -1,0 +1,76 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-scroll-into-view.stories';
+
+<Meta of={allStories} />
+
+# useScrollIntoView
+
+`useScrollIntoView` is a hook that handles scroll behavior for any scrollable element. Basic usage works the same way as `element.scrollIntoView()`. Hook adjusts scrolling animation with respect to the `reduced-motion` user preference.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Easing
+
+The hook accept custom `easing` math function to control the flow of animation. It takes `t` argument, which is a number between `0` and `1`.
+
+Default easing is `easeInOutQuad` - more info [here](https://easings.net/#easeInOutQuad). You can find other popular examples on [easings.net](https://easings.net/)
+
+```ts
+useScrollIntoView({
+  target: someDomElement,
+  easing: (t) => (t < 0.5 ? 16 * Math.pow(t, 5) : 1 - Math.pow(-2 * x + 2, 5) / 2), // easeInOutQuint
+});
+```
+
+### Example - Parent Node
+
+<Canvas of={allStories.ParentNode} />
+
+### Code - Parent Node
+
+<Source of={allStories.ParentNode} />
+
+### Example - Scroll X Axis
+
+<Canvas of={allStories.ScrollXAxis} />
+
+### Code - Scroll X Axis
+
+<Source of={allStories.ScrollXAxis} />
+
+## Parameters
+
+`useScrollIntoView` accepts the following parameters:
+
+- `onScrollFinish` – function that will be called after scroll animation
+- `easing` - custom math easing function
+- `duration` - duration of scroll animation in milliseconds
+- `axis` - axis of scroll
+- `cancelable` - indicator if animation may be interrupted by user scrolling
+- `offset` - additional distance between the nearest edge and element
+- `isList` - indicator that prevents content jumping in scrolling lists with multiple targets, for example Select, Carousel
+
+## Returns
+
+`useScrollIntoView` returns the following parameters:
+
+- `scrollIntoView` – function that scrolls element into view
+  - `alignment` - optional target element alignment relatively to parent based on current axis (default: `center`) - `start`, `center`, `end`
+- `cancelScroll` - function that cancels scroll animation
+- `targetRef` - ref of target HTML node
+- `scrollableRef` - ref of scrollable parent HTML element, if not used document element will be used
+
+Returned `scrollIntoView` function accepts single optional argument `alignment` - optional target element alignment relatively to parent based on current axis.
+
+```ts
+scrollIntoView({ alignment: 'center' });
+```

@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-focus-return.stories';
+
+<Meta of={allStories} />
+
+# useFocusReturn
+
+`useFocusReturn` is a React hook that returns focus to the last active element when a component is unmounted or closed. Its used in Modal, Drawer and etc.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `options` - An object containing the following properties:
+  - `opened` - A boolean indicating whether the element is opened or not.
+  - `shouldReturnFocus` - A boolean indicating whether the element should return focus or not.
+
+## Returns
+
+`useFocusReturn` returns a function that returns focus to the last active element.

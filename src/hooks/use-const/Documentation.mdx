@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-const.stories';
+
+<Meta of={allStories} />
+
+# useConst
+
+`useConst` is a React hook that returns a constant value. Even if `useMemo` is provided an empty array as its final argument, it doesn't offer a guarantee that it won't re-run for performance reasons later on. By using `useConst` you can ensure that initializers don't execute twice or more.
+
+## Usage
+
+### Example - With Value
+
+<Canvas of={allStories.WithValue} />
+
+### Code - With Value
+
+<Source of={allStories.WithValue} />
+
+### Example - With Function
+
+<Canvas of={allStories.WithFunction} />
+
+### Code - With Function
+
+<Source of={allStories.WithFunction} />
+
+## Parameters
+
+`init` - A function that returns the value to be stored in the constant. This function will only be called once.
+
+## Returns
+
+`useConst` returns the value returned by the `init` function.

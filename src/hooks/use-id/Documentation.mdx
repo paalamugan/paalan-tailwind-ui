@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-id.stories';
+
+<Meta of={allStories} />
+
+# useId
+
+`useId` is a hook generates a random id that persists across renders. The hook is usually used to bind input elements to labels. The generated random id is saved to ref and will not change unless the component is unmounted.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useId` accepts a two parameter:
+
+- `id` - a string that will be used as the ID if it is not empty
+- `prefix` - a string that will be prepended to the generated ID
+
+## Returns
+
+`useId` returns a string that can be used as an ID.

@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-os.stories';
+
+<Meta of={allStories} />
+
+# useOs
+
+`useOs` is a hook that returns user's os. Possible values are: `undetermined`, `macos`, `ios`, `windows`, `android` and `linux`. If the OS cannot be identified, for example, during server side rendering `undetermined` will be returned.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## OS Type
+
+You can import OS union type from `@paalan/tailwind-ui/hooks`:
+
+```ts
+import type { OS } from '@paalan/tailwind-ui/hooks';
+
+// OS type is 'undetermined' | 'macos' | 'ios' | 'windows' | 'android' | 'linux'
+```
+
+## Parameters
+
+`useOs` does not take any parameters.
+
+## Returns
+
+`useOs` returns a string with the user's os. Possible values are: `undetermined`, `macos`, `ios`, `windows`, `android` and `linux`.

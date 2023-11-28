@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-fullscreen.stories';
+
+<Meta of={allStories} />
+
+# useFullscreen
+
+`useFullscreen` is a React hook that allows you to toggle fullscreen mode.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - with a custom element
+
+<Canvas of={allStories.CustomTargetElement} />
+
+### Code - with a custom element
+
+<Source of={allStories.CustomTargetElement} />
+
+## Parameters
+
+`useFullscreen` does not take any parameters.
+
+## Returns
+
+`useFullscreen` returns an object with the following item:
+
+- `toggle` - a function that toggles fullscreen mode
+- `fullscreen` - a boolean that indicates whether fullscreen mode is active
+- `ref` - a React ref that should be attached to the element that should be fullscreened

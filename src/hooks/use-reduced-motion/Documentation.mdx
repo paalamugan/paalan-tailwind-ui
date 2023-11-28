@@ -1,0 +1,32 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-reduced-motion.stories';
+
+<Meta of={allStories} />
+
+# useReducedMotion
+
+`useReducedMotion` is a React hook that detects if user [prefers to reduce motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion). It uses [useMediaQuery](/docs/hooks-ui-and-dom-usemediaquery--documentation) hook under the hood. Hook relies on window.matchMedia() [API](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) and will always return `false` if api is not available (e.g. during server side rendering), unless the initial value is provided in the first argument.
+
+Use hook to detect if user prefers to reduce motion (`(prefers-reduced-motion: reduce) media query)` and set animations duration based on this value.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useReducedMotion` accepts a two parameters:
+
+- `initialValue` - initial value of the state. If not provided, hook will return `false` if `window.matchMedia` is not available.
+- `options` - options object that is passed to `useMediaQuery` hook.
+
+## Returns
+
+`useReducedMotion` returns a boolean value that indicates if user prefers to reduce motion.

@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-click-outside.stories';
+
+<Meta of={allStories} />
+
+# useClickOutside
+
+`useClickOutside` is a react hook that allows you to detect clicks outside of a given element.
+It returns a ref that you can attach to any element.
+When a click occurs outside of that element, the `onClickOutside` callback will be called.
+This is useful for detecting clicks outside of a modal or dropdown menu.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `handler` - A callback function that will be called when a click occurs outside of the element.
+- `events` - An array of event names to listen for. Defaults to `['mousedown', 'mouseup', 'touchstart', 'touchend']`.
+- `nodes` - The list of elements to ignore clicks outside of. If not provided, the listener will be attached to the element passed as a ref.
+
+## Returns
+
+`useClickOutside` returns a ref that you can attach to any element.
+When a click occurs outside of that element, the `onClickOutside` callback will be called.
+
+- `ref` - A ref that should be attached to the element you want to detect clicks outside of.

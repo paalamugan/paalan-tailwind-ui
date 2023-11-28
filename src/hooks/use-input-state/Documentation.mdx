@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-input-state.stories';
+
+<Meta of={allStories} />
+
+# useInputState
+
+`useInputState` is a hook handles state of native inputs (with event in `onChange` handler) and custom inputs (with value in `onChange` handler). Hook works with all Paalan and native inputs:
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - With Use State
+
+<Canvas of={allStories.WithUseState} />
+
+### Code - With Use State
+
+<Source of={allStories.WithUseState} />
+
+## Parameters
+
+`useInputState` accepts a single parameter:
+
+- `initialState` - initial state of input
+
+## Returns
+
+`useInputState` returns an array with two elements:
+
+- `value` - current value of input
+- `onChange` - function that handles change of input value

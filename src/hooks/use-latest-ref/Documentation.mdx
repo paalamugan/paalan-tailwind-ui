@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-latest-ref.stories';
+
+<Meta of={allStories} />
+
+# useLatestRef
+
+`useLatestRef` is a hook that returns a ref that always points to the latest value passed to it. It is useful for when you need to access the latest value of a variable inside a callback.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useLatestRef` accepts a single parameter, the value to be stored in the ref.
+
+## Returns
+
+`useLatestRef` returns a ref that always points to the latest value passed to it.

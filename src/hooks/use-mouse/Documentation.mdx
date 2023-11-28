@@ -1,0 +1,43 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-mouse.stories';
+
+<Meta of={allStories} />
+
+# useMouse
+
+`useMouse` is a React hook that tracks the mouse position and state.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - Without ref
+
+If you do not provide ref, mouse position is tracked relative to the document element:
+
+<Canvas of={allStories.UsageWithoutRef} />
+
+### Code - Without ref
+
+<Source of={allStories.UsageWithoutRef} />
+
+## Parameters
+
+`useMouse` accepts a single parameter, an object of options.
+
+- `resetOnExit` - Whether to reset the mouse position to `(0, 0)` when the mouse leaves the tracked element. Defaults to `false`.
+
+## Returns
+
+`useMouse` returns an object with the following properties:
+
+- `ref` - A `React.RefObject` that should be attached to the element that you want to track the mouse position and state for.
+- `x` - The current x position of the mouse relative to the element.
+- `y` - The current y position of the mouse relative to the element.

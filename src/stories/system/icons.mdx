@@ -1,0 +1,80 @@
+import { ColorItem, ColorPalette, IconGallery, IconItem, Meta } from '@storybook/blocks';
+
+import * as CustomIcons from '../../icons/custom';
+import * as OutlineIcons from '../../icons/outline';
+import * as SolidIcons from '../../icons/solid';
+
+<Meta title="system/Icons" />
+
+# Icons
+
+This is a collection of icons used for the applications. They are available in both outline and solid styles. The icons are available as React components.
+
+## Usage
+
+- Import the **Custom icon** you want to use from `@paalan/tailwind-ui/icons`.
+
+```tsx
+import { AccessibilityIcon } from '@paalan/tailwind-ui/icons';
+
+<AccessibilityIcon />;
+```
+
+- Import the **Outline icon** you want to use from `@paalan/tailwind-ui/icons/outline`.
+
+```tsx
+import { AcademicCapIcon } from '@paalan/tailwind-ui/icons/outline';
+
+<AcademicCapIcon />;
+```
+
+- Import the **Solid icon** you want to use from `@paalan/tailwind-ui/icons/solid`.
+
+```tsx
+import { AcademicCapIcon } from '@paalan/tailwind-ui/icons/solid';
+
+<AcademicCapIcon />;
+```
+
+### Quick Links
+
+- [All Icons](/story/icons-icons--all-icons)
+- [Outline Icons](/story/icons-icons--outline-icons)
+- [Solid Icons](/story/icons-icons--solid-icons)
+- [Custom Icons](/story/icons-icons--custom-icons)
+
+## Outline
+
+**For this outline icons, We took a Reference from [Heroicons](https://heroicons.com/).**
+
+<IconGallery>
+  {Object.entries(OutlineIcons).map(([name, Icon]) => (
+    <IconItem key={name} name={name}>
+      <Icon />
+    </IconItem>
+  ))}
+</IconGallery>
+
+## Solid
+
+**For this solid icons, We took a Reference from [Heroicons](https://heroicons.com/).**
+
+<IconGallery>
+  {Object.entries(SolidIcons).map(([name, Icon]) => (
+    <IconItem key={name} name={name}>
+      <Icon />
+    </IconItem>
+  ))}
+</IconGallery>
+
+## Custom
+
+**For this custom icons, We took a Reference from [Radix-UI](https://www.radix-ui.com/icons) and created some new icons for our application [Custom Icons](/story/icons-icons--custom-icons).**
+
+<IconGallery>
+  {Object.entries(CustomIcons).map(([name, Icon]) => (
+    <IconItem key={name} name={name}>
+      <Icon />
+    </IconItem>
+  ))}
+</IconGallery>

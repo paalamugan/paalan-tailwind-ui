@@ -1,0 +1,48 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-set-state.stories';
+
+<Meta of={allStories} />
+
+# useSetState
+
+`useSetState` is a hook that allows you to pass a state object to a function and have it update the state partically. It is useful for when you have a state object that is large and you only want to update a small part of it.
+
+```tsx
+const [state, setState] = useSetState({ name: 'John', age: 35, job: 'Engineer' });
+
+state; // -> { name: 'John', age: 35, job: 'Engineer' }
+
+setState({ name: 'Jane' }); // -> { name: 'Jane', age: 35, job: 'Engineer' }
+setState({ age: 25, job: 'Manager' }); // -> { name: 'Jane', age: 25, job: 'Manager' }
+setState((current) => ({ age: current.age + 7 })); // -> { name: 'Jane', age: 32, job: 'Manager' }
+```
+
+Note that it can work only with objects: primitive values and arrays are not supported:
+
+```tsx
+useSetState([1, 2, 3]); // -> will not work
+useSetState(1); // -> will not work
+useSetState({ skills: ['JavaScript', 'TypeScript'] }); // -> works fine
+```
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useSetState` accepts an initial state object as a parameter.
+
+## Returns
+
+`useSetState` returns a tuple with two elements:
+
+- `state` - the current state object
+- `setState` - a function that accepts a new state object or a function that returns a new state object

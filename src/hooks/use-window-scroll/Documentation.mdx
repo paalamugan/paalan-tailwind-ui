@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-window-scroll.stories';
+
+<Meta of={allStories} />
+
+# useWindowScroll
+
+`useWindowScroll` returns current scroll position and a function to scroll smoothly to given position.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useWindowScroll` accepts no parameters.
+
+## Returns
+
+`useWindowScroll` returns an tuple with following elements:
+
+- `position` - current scroll position
+
+  - `x` - horizontal scroll position
+  - `y` - vertical scroll position
+
+- `scrollTo` - function to scroll smoothly to given position with following parameters:
+  - `x` - horizontal scroll position
+  - `y` - vertical scroll position

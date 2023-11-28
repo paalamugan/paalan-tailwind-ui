@@ -1,0 +1,52 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-idle.stories';
+
+<Meta of={allStories} />
+
+# useIdle
+
+`useIdle` is a React hook that fires a callback when the user is idle.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - With Custom Event
+
+By default, the hook will listen to `keypress`, `mousemove`, `touchmove`, `click` and `scroll` events to set idle status. To change that, provide a list of events in the `options` argument:
+
+<Canvas of={allStories.WithCustomEvent} />
+
+### Code - With Custom Event
+
+<Source of={allStories.WithCustomEvent} />
+
+### Example - With Initial State
+
+By default, the hook will return an idle state. To change that, provide an initial state value in the `options` argument:
+
+<Canvas of={allStories.WithInitialState} />
+
+### Code - With Initial State
+
+<Source of={allStories.WithInitialState} />
+
+## Parameters
+
+`useIdle` accepts a two parameter:
+
+- `timeout` - the number of milliseconds before the user is considered idle
+- `options` - an object with the following optional properties:
+  - `events` - an array of event names that should be considered user activity
+  - `initialState` - a boolean that indicates whether the user is initially idle
+
+## Returns
+
+`useIdle` returns a boolean that indicates whether the user is idle.

@@ -1,0 +1,41 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-disclosure.stories';
+
+<Meta of={allStories} />
+
+# useDisclosure
+
+`useDisclosure` is a custom hook used to help handle common open, close, or toggle scenarios. It can be used to control feedback component such as `Modal`, `AlertDialog`, `Drawer`, etc.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `options` - An object containing the following properties:
+  - `defaultIsOpen` - If `true`, the disclosure will be open by default.
+  - `isOpen` - If `true`, the disclosure will be open.
+  - `onOpen` - Callback fired when the disclosure opens.
+  - `onClose` - Callback fired when the disclosure closes.
+  - `onChange` - Callback fired when the disclosure opens or closes.
+  - `id` - The `id` of the disclosure. If not provided, one will be generated for you.
+
+## Returns
+
+`useDisclosure` returns an object containing the following properties:
+
+- `isOpen` - If `true`, the disclosure is open.
+- `onOpen` - Callback fired when the disclosure opens.
+- `onClose` - Callback fired when the disclosure closes.
+- `onToggle` - Callback fired when the disclosure opens or closes.
+- `isControlled` - If `true`, the disclosure is controlled.
+- `getButtonProps` - Props to be spread on the disclosure button element.
+- `getDisclosureProps` - Props to be spread on the disclosure element.

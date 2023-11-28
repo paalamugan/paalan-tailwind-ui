@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-color-scheme.stories';
+
+<Meta of={allStories} />
+
+# useColorScheme
+
+`useColorScheme` is a React hook that returns the current color scheme of the user's operating system. It is useful for implementing dark mode in your application.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useColorScheme` accepts no parameters.
+
+## Returns
+
+`useColorScheme` returns a string that is either `light` or `dark`.

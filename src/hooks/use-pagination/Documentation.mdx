@@ -1,0 +1,108 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-pagination.stories';
+
+<Meta of={allStories} />
+
+# usePagination
+
+`usePagination` is a state management hook for [Pagination](/docs/components-pagination--docs) component, it manages pagination with controlled and uncontrolled state:
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+```ts
+const pagination = usePagination({ total: 10, initialPage: 1 });
+
+pagination.range; // -> [1, 2, 3, 4, 5, 'dots', 10];
+
+pagination.setPage(5);
+pagination.range; // -> [1, 'dots', 4, 5, 6, 'dots', 10];
+
+pagination.next();
+pagination.range; // -> [1, 'dots', 5, 6, 7, 'dots', 10];
+
+pagination.previous();
+pagination.range; // -> [1, 'dots', 4, 5, 6, 'dots', 10];
+
+pagination.last();
+pagination.range; // -> [1, 'dots', 6, 7, 8, 9, 10];
+
+pagination.first();
+pagination.range; // -> [1, 2, 3, 4, 5, 'dots', 10];
+```
+
+## Controlled
+
+The hook supports controlled mode, provide `page` and `onChange` props to manage state from outside:
+
+```ts
+const [page, onChange] = useState(1);
+const pagination = usePagination({ total: 10, page, onChange });
+
+// Will call onChange with 5
+pagination.setPage(5);
+pagination.range; // -> [1, 'dots', 4, 5, 6, 'dots', 10];
+
+// ... All other examples work the same
+```
+
+## Siblings
+
+Control number of active item siblings with `siblings`:
+
+```ts
+const pagination = usePagination({ total: 20, siblings: 3 });
+```
+
+### Example - With Siblings
+
+<Canvas of={allStories.WithSiblings} />
+
+### Code - With Siblings
+
+<Source of={allStories.WithSiblings} />
+
+## Boundaries
+
+Control number of visible items on left/right edges with `boundaries`:
+
+```ts
+const pagination = usePagination({ total: 20, boundaries: 3 });
+```
+
+### Example - With Boundaries
+
+<Canvas of={allStories.WithBoundaries} />
+
+### Code - With Boundaries
+
+<Source of={allStories.WithBoundaries} />
+
+## Parameters
+
+`usePagination` accepts a single object parameter:
+
+- `initialPage` - Page selected on initial render, defaults to 1
+- `page` - Controlled active page number
+- `total` - Total amount of pages
+- `siblings` - Siblings amount on left/right side of selected page, defaults to 1
+- `boundaries` - Amount of elements visible on left/right edges, defaults to 1
+- `onChange` - Callback fired after change of each page
+
+## Returns
+
+`usePagination` returns an object with the following properties:
+
+- `active` - Active page number
+- `setPage` - Function to set active page
+- `next` - Function to set next page
+- `previous` - Function to set previous page
+- `first` - Function to set first page
+- `last` - Function to set last page
+- `range` - Array of page numbers to display in pagination component

@@ -1,0 +1,69 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-hotkeys.stories';
+
+<Meta of={allStories} />
+
+# useHotkeys
+
+`useHotkeys` accepts as its first argument an array of hotkeys and handler tuples:
+
+- `hotkey` - hotkey string, for example `ctrl+E`, `shift+alt+L`, `mod+S`
+- `handler` - event handler called when a given combination was pressed
+- `options` - object with extra options for hotkey handler
+
+The second argument is a list of HTML tags:
+
+- `tagsToIgnore` - HTML tag names that hotkeys will not trigger on
+- `triggerOnContentEditable` - Whether shortcuts should trigger when based on contentEditable
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - With Target Element
+
+<Canvas of={allStories.WithTargetElement} />
+
+### Code - With Target Element
+
+<Source of={allStories.WithTargetElement} />
+
+With `getHotkeyHandler` you can also add events to any dom node using .addEventListener:
+
+```tsx
+import { getHotkeyHandler } from '@paalan/tailwind-ui/hooks';
+
+document.body.addEventListener(
+  'keydown',
+  getHotkeyHandler([
+    ['mod+Enter', () => console.log('Submit')],
+    ['mod+S', () => console.log('Save')],
+  ]),
+);
+```
+
+## Supported formats
+
+- `mod+S` – detects `⌘+S` on macOS and `Ctrl+S` on Windows
+- `ctrl+shift+X` – handles multiple modifiers
+- `alt + shift + L` – you can use whitespace inside hotkey
+- `ArrowLeft` – you can use special keys using [this format](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values)
+
+## Parameters
+
+`useHotkeys` accepts the following parameters:
+
+- `hotkeys` - An array of hotkeys and handler tuples.
+- `tagsToIgnore` - An array of HTML tag names that hotkeys will not trigger on.
+- `triggerOnContentEditable` - Whether shortcuts should trigger when based on contentEditable.
+
+## Returns
+
+`useHotkeys` returns nothing.

@@ -1,0 +1,57 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-session-storage.stories';
+
+<Meta of={allStories} />
+
+# useSessionStorage
+
+`useSessionStorage` is a React hook that syncs a value to [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage). The hook returns a stateful value, and a function to update it.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - SerializeJson
+
+<Canvas of={allStories.SerializeJson} />
+
+### Code - SerializeJson
+
+<Source of={allStories.SerializeJson} />
+
+### Example - SerializeBoolean
+
+<Canvas of={allStories.SerializeBoolean} />
+
+### Code - SerializeBoolean
+
+<Source of={allStories.SerializeBoolean} />
+
+### Example - MultipleHooks
+
+<Canvas of={allStories.MultipleHooks} />
+
+### Code - MultipleHooks
+
+<Source of={allStories.MultipleHooks} />
+
+## Parameters
+
+`Options` - An optional object that can be passed to `useSessionStorage` to configure its behavior.
+
+- `key` - Storage key
+- `defaultValue` - Default value that will be set if value is not found in storage
+- `getInitialValueInEffect` - If set to true, value will be updated in useEffect after mount
+- `serialize` - Function to serialize value into a string to be saved in storage
+- `deserialize` - Function to deserialize string value from storage to value
+
+## Returns
+
+`useSessionStorage` returns a tuple of the current value and a setter function. The setter function updates both the local state and sessionStorage.

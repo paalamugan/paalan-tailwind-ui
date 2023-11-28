@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-isomorphic-effect.stories';
+
+<Meta of={allStories} />
+
+# useIsomorphicEffect
+
+`useIsomorphicEffect` is a replacement for useEffect hook that works in both browser and server environments.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useIsomorphicEffect` accepts the same parameters as `useEffect` and `useLayoutEffect`. See the [React documentation](https://reactjs.org/docs/hooks-reference.html#useeffect) for more information.
+
+## Returns
+
+`useIsomorphicEffect` returns the same value as `useEffect` and `useLayoutEffect`. See the [React documentation](https://reactjs.org/docs/hooks-reference.html#useeffect) for more information.

@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-timeout.stories';
+
+<Meta of={allStories} />
+
+# useTimeout
+
+`useTimeout` is a React hook that sets a timeout and returns a boolean indicating whether the timeout has expired. It is similar to `setTimeout`, but it is a React hook and it returns a object with `start` and `clear`.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useTimeout` accepts three parameters:
+
+- `callback` - function that will be called after the timer elapses
+- `delay` - number of milliseconds the timer should wait before the specified function is executed
+- `options` - An object with the following optional properties:
+  - `autoInvoke` - determines whether the timer should be started on mount, defaults to `false`
+
+## Returns
+
+`useTimeout` returns an object with the following properties:
+
+- `start` - A function that starts the timeout.
+- `clear` - A function that clears the timeout.

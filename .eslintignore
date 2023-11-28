@@ -1,0 +1,6 @@
+dist 
+.eslintrc.cjs
+
+!.storybook/main.ts
+!.storybook/manager.ts
+!.storybook/preview.tsx

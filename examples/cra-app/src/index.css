@@ -1,0 +1,5 @@
+@import '@paalan/tailwind-ui/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

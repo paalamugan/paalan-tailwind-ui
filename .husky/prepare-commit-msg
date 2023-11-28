@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ "$CZ" = "1" ] || [ "$2" = "message" ] || [ "$2" = "commit" ]; then true
+else
+  exec < /dev/tty && npx cz --hook || true
+fi

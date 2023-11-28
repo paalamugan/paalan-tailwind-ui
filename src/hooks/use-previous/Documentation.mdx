@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-previous.stories';
+
+<Meta of={allStories} />
+
+# usePrevious
+
+`usePrevious` is a React hook that stores the previous value of a state in a ref. IT returns undefined on initial render and the previous value of a state after rerender.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`usePrevious` accepts a single parameter, the current value of a state.
+
+## Returns
+
+`usePrevious` returns the previous value of a state.

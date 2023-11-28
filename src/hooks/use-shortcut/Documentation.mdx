@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-shortcut.stories';
+
+<Meta of={allStories} />
+
+# useShortcut
+
+`useShortcut` is a React hook that allows you to easily add keyboard shortcuts to your React app.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useShortcut` accepts a single parameter, `options`, which is an object with the following properties:
+
+- `timeout` (number): The number of milliseconds to wait before resetting the shortcut. Defaults to `300`.
+- `preventDefault` (boolean): Whether to call `preventDefault` on the event. Defaults to `true`.
+
+## Returns
+
+`useShortcut` returns a single function, `handleShortcut`, which is the event handler that you should pass to the `onKeyDown` prop of the element you want to listen for keyboard shortcuts on.

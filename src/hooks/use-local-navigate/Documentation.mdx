@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-local-navigate.stories';
+
+<Meta of={allStories} />
+
+# useLocalNavigate
+
+`useLocalNavigate` is a custom hook that provides a wrapper around the `useNavigate` hook from React Router to handle navigation with dynamic parameters and query strings.
+This hook is `fully typed safe` for search and params value navigation.
+
+## Usage
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useLocalNavigate` accepts no parameters.
+
+## Returns
+
+`useLocalNavigate` returns an function that accepts two parameters:
+
+- `path` - the path to navigate to
+- `options` - an object containing the parameters to be used in the path
+  - `query` - an object containing the query parameters to be used in the path
+  - `params` - an object containing the parameters to be used in the path
+  - `hash` - a string containing the hash to be used in the path
+  - `replace` - a boolean indicating whether to replace the current history entry or add a new one

@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-page-leave.stories';
+
+<Meta of={allStories} />
+
+# usePageLeave
+
+`usePageLeave` is a React hook that allows you to execute a function when the user leaves the page.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`usePageLeave` accepts a function as its only parameter. This function will be executed when the user leaves the page.
+
+## Returns
+
+`usePageLeave` returns nothing.

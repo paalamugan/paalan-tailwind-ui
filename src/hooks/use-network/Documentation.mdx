@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-network.stories';
+
+<Meta of={allStories} />
+
+# useNetwork
+
+`useNetwork` is a React hook that returns the current network status. It is a wrapper around the [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API).
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useNetwork` does not take any parameters.
+
+## Returns
+
+`useNetwork` returns an object with the following properties:
+
+- `online` - `true` if the browser is online, `false` otherwise.
+- `downlink` - The maximum downlink speed, in megabits per second (Mbps), for the underlying connection technology.
+- `downlinkMax` - The maximum downlink speed, in megabits per second (Mbps), for the underlying connection technology.
+- `effectiveType` - The effective type of the connection meaning one of 'slow-2g', '2g', '3g', or '4g'.
+- `rtt` - The estimated effective round-trip time of the current connection, rounded to the nearest multiple of 25 milliseconds.
+- `saveData` - A boolean indicating whether the user has set a reduced data usage option on the user agent.
+- `type` - The type of connection a device is using to communicate with the network.
+- `addEventListener` - A function that can be used to add an event listener for the `change` event.
+- `removeEventListener` - A function that can be used to remove an event listener for the `change` event.

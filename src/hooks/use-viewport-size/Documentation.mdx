@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-viewport-size.stories';
+
+<Meta of={allStories} />
+
+# useViewportSize
+
+`useViewportSize` returns current viewport's `width` and `height`, it subscribes to `resize` and `orientationchange` events, during ssr hook will return `{ width: 0, height: 0 }`.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useViewportSize` accepts no parameters.
+
+## Returns
+
+`useViewportSize` returns an object with `width` and `height` properties.

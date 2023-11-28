@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-logger.stories';
+
+<Meta of={allStories} />
+
+# useLogger
+
+`useLogger` logs given values to the console each time component renders. Open devtools to see state changes in console.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useLogger` accepts two parameters:
+
+- `componentName` - a string containing the name of the component to be logged
+- `props` - an object containing the props to be logged
+
+## Returns
+
+`useLogger` returns nothing.

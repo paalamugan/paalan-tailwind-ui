@@ -1,0 +1,91 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-callback-ref.stories';
+
+<Meta of={allStories} />
+
+# useCallbackRef
+
+`useCallbackRef` is a hook that returns a callback function that will not change between renders. This is useful
+when passing callbacks to child components that rely on reference equality to prevent unnecessary renders.
+
+## Usage
+
+### Example - Without useCallbackRef
+
+<Canvas of={allStories.WithoutUseCallbackRef} />
+
+### Code - Without useCallbackRef
+
+```tsx
+const ChildComponentWithoutUseCallbackRef = ({
+  autoIncrement,
+  count,
+}: {
+  autoIncrement: VoidFunction;
+  count: number;
+}) => {
+  useEffect(() => {
+    count < 100 && autoIncrement();
+  }, [autoIncrement, count]);
+
+  return <Text>Re-Render: {count} times</Text>;
+};
+
+export function WithoutUseCallbackRef() {
+  const [count, setCount] = useState(0);
+
+  const autoIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  return (
+    <Box>
+      <ChildComponentWithoutUseCallbackRef autoIncrement={autoIncrement} count={count} />
+    </Box>
+  );
+}
+```
+
+### Example - With useCallbackRef
+
+<Canvas of={allStories.WithUseCallbackRef} />
+
+### Code - With useCallbackRef
+
+```tsx
+const ChildComponentWithUseCallbackRef = ({ autoIncrement, count }: { autoIncrement: VoidFunction; count: number }) => {
+  const autoIncrementFn = useCallbackRef(autoIncrement);
+
+  useEffect(() => {
+    autoIncrementFn();
+  }, [autoIncrementFn]);
+
+  return <Text>Re-Render Count: {count} times</Text>;
+};
+
+export function WithUseCallbackRef() {
+  const [count, setCount] = useState(0);
+
+  const autoIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  return (
+    <Box>
+      <ChildComponentWithUseCallbackRef autoIncrement={autoIncrement} count={count} />
+    </Box>
+  );
+}
+```
+
+## Parameters
+
+- `callback` - A callback function that will not change between renders.
+- `deps` - An array of dependencies that will cause the ref to be updated if changed.
+
+## Returns
+
+`useCallbackRef` returns a ref that will not change between renders.
+
+- `callbackRef` - A ref that will not change between renders.

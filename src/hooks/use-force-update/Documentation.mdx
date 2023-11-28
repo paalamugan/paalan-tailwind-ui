@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-force-update.stories';
+
+<Meta of={allStories} />
+
+# useForceUpdate
+
+`useForceUpdate` is a React hook that returns a function that can be used to force a component to update.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useForceUpdate` does not take any parameters.
+
+## Returns
+
+`useForceUpdate` returns a function, which when called rerenders the component.

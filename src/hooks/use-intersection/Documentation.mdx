@@ -1,0 +1,33 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-intersection.stories';
+
+<Meta of={allStories} />
+
+# useIntersection
+
+`useIntersection` is a React hook that allows you to detect when an element is visible in the viewport. It uses the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) under the hood.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useIntersection` accepts a single parameter:
+
+- `options` - object with options for the Intersection Observer API
+
+## Returns
+
+`useIntersection` returns an object with the following properties:
+
+- `ref` - a React ref that you should pass to the element you want to observe
+- `isIntersecting` - a boolean indicating whether the element is intersecting the viewport
+- `entry` - the [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) object

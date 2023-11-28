@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-scroll-lock.stories';
+
+<Meta of={allStories} />
+
+# useScrollLock
+
+`useScrollLock` is a React hook that prevents scrolling of the document body when a target element is focused. This is useful for modals, dropdowns, and other components that require the user to interact with them before continuing.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useScrollLock` accepts two parameters:
+
+- `lock` - a boolean value that indicates whether or not to lock scrolling. When `true`, scrolling is locked. When `false`, scrolling is unlocked.
+- `options` - An object containing options to customize the scroll lock behavior.
+  - `disableBodyPadding` - a boolean value that indicates whether or not to disable body padding when scrolling is locked. When `true`, body padding is disabled. When `false`, body padding is not disabled. Defaults to `false`.
+
+## Returns
+
+`useScrollLock` returns a tuple containing the current scroll lock state and a function to update the scroll lock state.

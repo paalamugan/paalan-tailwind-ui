@@ -1,0 +1,33 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-lazy-query-fetcher.stories';
+
+<Meta of={allStories} />
+
+# useLazyQueryFetcher
+
+`useLazyQueryFetcher` is a hook that allows you to fetch data lazily. It is useful when you want to fetch data only when it is needed.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useLazyQueryFetcher` accepts the single parameter `queryFetcher`.
+
+## Returns
+
+`useLazyQueryFetcher` returns an object with the following properties:
+
+- `data` - The data returned by the handler.
+- `error` - The error returned by the handler.
+- `fetcher` - A function that will trigger the handler to be called again.
+- `initialized` - A boolean indicating whether the handler has been called at least once.
+- `loading` - A boolean indicating whether the handler is currently being called.

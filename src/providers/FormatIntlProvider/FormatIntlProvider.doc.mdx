@@ -1,0 +1,141 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './FormatIntlProvider.stories';
+
+<Meta of={allStories} />
+
+# FormatIntlProvider
+
+The FormatIntlProvider provide a format context to the application such as the `date formatter`, `currency formatter`, `number formatter` and `translator`.
+
+## Usage
+
+### Example - Date formatter
+
+<Canvas of={allStories.DateFormatter} />
+
+### Code - Date formatter
+
+<Source of={allStories.DateFormatter} />
+
+### Example - Currency formatter
+
+<Canvas of={allStories.CurrencyFormatter} />
+
+### Code - Currency formatter
+
+<Source of={allStories.CurrencyFormatter} />
+
+### Example - Number formatter
+
+<Canvas of={allStories.NumberFormatter} />
+
+### Code - Number formatter
+
+<Source of={allStories.NumberFormatter} />
+
+### Example - Translate text
+
+<Canvas of={allStories.TranslateText} />
+
+### Code - Translate text
+
+<Source of={allStories.TranslateText} />
+
+## Hooks
+
+`useFormatIntl` hook returns the following properties from `FormatIntlContextState` type.
+
+    - `dateIntl` - it is used to format the date.
+    - `currencyIntl` - it is used to format the currency.
+    - `numberIntl` - it is used to format the number.
+    - `t` - it is used to translate the text.
+    - `countryBasedFormatKey` - it is used to get the country based format key for the format provider.
+    - `setCountryBasedFormatKey` - it is used to set the country based format key for the format provider.
+    - `timeZone` - it is used to get the time zone for the format provider.
+    - `setTimeZone` - it is used to set the time zone for the format provider.
+    - `currencyExchange` - it is used to convert from one currency to another.
+    - `updateCurrencyExchange` - it is used to set the currency exchange for the format provider.
+
+### Example - useFormatIntl
+
+```tsx
+import { useFormatIntl } from '@paalan/tailwind-ui/providers';
+
+const { dateIntl, currencyIntl, numberIntl, t } = useFormatIntl();
+
+const formattedDate = dateIntl.formatDate(new Date()); // 31/12/2020
+const formattedDateTime = dateIntl.formatDateTime(new Date()); // 31/12/2020 12:00
+const formatRelativeTime = dateIntl.formatRelativeTime(new Date()); // today at 12:00
+const formattedDateWithCustomFormat = dateIntl.format(new Date(), 'MM/dd/YYYY'); // 12/31/2020
+const formattedCurrency = currencyIntl.format(100); // $100.00
+const formattedNumber = numberIntl.format(10000); // 10,000
+const translatedText = t('hello, {name}', { name: 'John' }); // Hello John
+```
+
+## Sample Example
+
+```tsx
+import { Box, Text } from '@paalan/tailwind-ui/layouts';
+import { FormatIntlProvider, useFormatIntl } from '@paalan/tailwind-ui/providers';
+
+declare global {
+  interface CountryBasedFormatOptions {
+    FR: CountryBasedFormat;
+    ES: CountryBasedFormat;
+  }
+}
+
+const App = () => {
+  const { dateIntl, currencyIntl, numberIntl, t } = useFormatIntl();
+
+  const formattedDate = dateIntl.formatDate(new Date()); // 31/12/2020
+  const formattedDateTime = dateIntl.formatDateTime(new Date()); // 31/12/2020 12:00
+  const formatRelativeTime = dateIntl.formatRelativeTime(new Date()); // today at 12:00
+  const formattedDateWithCustomFormat = dateIntl.format(new Date(), 'MM/dd/YYYY'); // 12/31/2020
+  const formattedCurrency = currencyIntl.format(100); // $100.00
+  const formattedNumber = numberIntl.format(10000); // 10,000
+  const translatedText = t('hello, {name}', { name: 'John' }); // Hello John
+
+  return (
+    <Box>
+      <Text>{formattedDate}</Text>
+      <Text>{formattedDateTime}</Text>
+      <Text>{formatRelativeTime}</Text>
+      <Text>{formattedDateWithCustomFormat}</Text>
+      <Text>{formattedCurrency}</Text>
+      <Text>{formattedNumber}</Text>
+      <Text>{translatedText}</Text>
+    </Box>
+  );
+};
+
+const Root = () => {
+  const countryBasedFormatOptions: Partial<CountryBasedFormatOptions> = {
+    FR: {
+      locale: 'fr',
+      currency: 'EUR',
+      timeZone: 'CET',
+    },
+    ES: {
+      locale: 'es',
+      currency: 'EUR',
+      timeZone: 'CET',
+    },
+  };
+  return (
+    <FormatIntlProvider
+      dateFormat="dd/MM/yyyy"
+      dateTimeFormat="dd/MM/yyyy HH:mm"
+      countryBasedFormatKey="FR"
+      countryBasedFormatOptions={countryBasedFormatOptions}
+    >
+      <App />
+    </FormatIntlProvider>
+  );
+};
+```
+
+## Props
+
+<Controls sort="requiredFirst" />

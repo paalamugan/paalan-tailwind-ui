@@ -1,0 +1,68 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './ThemeProvider.stories.tsx';
+
+<Meta of={allStories} />
+
+# ThemeProvider
+
+The ThemeProvider component provides a theme to its child components and persists the theme in local storage.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Basic} sourceState="none" />
+
+### Code
+
+```tsx
+import { Button } from '@paalan/tailwind-ui/components';
+import { Heading, HStack, Stack } from '@paalan/tailwind-ui/layouts';
+import { ThemeProvider, useTheme } from '@paalan/tailwind-ui/providers';
+
+const Component = () => {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Stack as="section" gap="4">
+      <Heading>Current Theme: {theme}</Heading>
+      <HStack>
+        <Button onClick={() => setTheme('dark')} variant="outline">
+          Dark
+        </Button>
+        <Button onClick={() => setTheme('light')} variant="outline">
+          Light
+        </Button>
+        <Button onClick={() => setTheme('system')} variant="outline">
+          System
+        </Button>
+      </HStack>
+    </Stack>
+  );
+};
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <Component />
+    </ThemeProvider>
+  );
+};
+
+function Usage() {
+  return <App />;
+}
+```
+
+## Hooks
+
+`useTheme` is a hook that returns the current theme and a function to set the theme.
+
+```ts
+const { theme, setTheme } = useTheme();
+```
+
+## Props
+
+<Controls sort="requiredFirst" />

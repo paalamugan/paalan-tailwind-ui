@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-element-size.stories';
+
+<Meta of={allStories} />
+
+# useElementSize
+
+`useElementSize` is a React hook that measures the size of an element and returns it as an object with `width` and `height` properties. It also returns a `ref` that you need to assign to the element you want to measure.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useElementSize` accepts no parameters.
+
+## Returns
+
+`useElementSize` returns an object with the following properties:
+
+- `ref` - the ref that you need to assign to the element you want to measure
+- `width` - the width of the element in pixels
+- `height` - the height of the element in pixels

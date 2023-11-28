@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-favicon.stories';
+
+<Meta of={allStories} />
+
+# useFavicon
+
+`useFavicon` is a React hook that allows you to change the favicon of the page.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useFavicon` accepts a single parameter:
+
+- `url` - The URL of the favicon to use.
+
+## Returns
+
+`useFavicon` returns no values.

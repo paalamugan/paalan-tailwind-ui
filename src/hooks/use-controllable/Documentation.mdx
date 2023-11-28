@@ -1,0 +1,59 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-controllable.stories';
+
+<Meta of={allStories} />
+
+# useControllableProp
+
+Given a prop value and state value, the `useControllableProp` hook is used to determine whether a component is controlled or uncontrolled, and also returns the computed value.
+
+- It returns the prop value if the component is controlled
+- It returns the state value if the component is uncontrolled
+
+## Usage
+
+```tsx
+const [isControlled, value] = useControllableProp(propValue, stateValue);
+```
+
+# useControllableState
+
+`useControllableState` is a hook that allows you to control the state of a component from outside of the component. It is similar to `useState`, but it allows you to pass in a value from outside of the component, and it will return the value that you should use in the component.
+
+## Usage
+
+### Example - Controlled
+
+<Canvas of={allStories.Controlled} />
+
+### Code - Controlled
+
+<Source of={allStories.Controlled} />
+
+### Example - Uncontrolled
+
+<Canvas of={allStories.Uncontrolled} />
+
+### Code - Uncontrolled
+
+<Source of={allStories.Uncontrolled} />
+
+## Parameters
+
+- `value` - The value that you want to use in the component.
+
+- `defaultValue` - The default value that you want to use in the component.
+
+- `onChange` - A callback that will be called when the value changes. This is useful if you want to update the value in the parent component.
+
+- `shouldUpdate` - A function that will be called when the value changes. If this function returns `true`, then the value will be updated. If this function returns `false`, then the value will not be updated. This is useful if you want to prevent the value from being updated in certain cases.
+
+## Returns
+
+`[value, setValue]` - A tuple containing the value and a function to update the value. This is the same as the return value of `useState`.
+
+## Why use this hook?
+
+- This hook is useful if you want to control the state of a component from outside of the component. For example, if you have a component that has a `value` prop, and you want to control the value from outside of the component, then you can use this hook to do that.
+- This hook provides helpful error or warning messages when you switch between controlled or uncontrolled modes or when you attempt to update the `defaultValue` passed.

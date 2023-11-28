@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+<Meta title="hooks/Life Cycle/useShallowEffect" />
+
+# useShallowEffect
+
+`useShallowEffect` works exactly like `useEffect`, but performs shallow dependencies comparison instead of referential comparison.
+
+## Usage
+
+```ts
+import { useEffect } from 'react';
+
+import { useShallowEffect } from '@paalan/tailwind-ui/hooks';
+
+// Will be called on each render
+useEffect(() => {}, [{ a: 1 }]);
+
+// Will be called only once
+useShallowEffect(() => {}, [{ a: 1 }]);
+```
+
+Hook works with primitive values, arrays and objects:
+
+```ts
+// Primitive values are handled like in useEffect
+useShallowEffect(() => {}, [1, 2, 3]);
+
+// Arrays with primitive values will not trigger callback
+useShallowEffect(() => {}, [[1], [2], [3]]);
+
+// Objects with primitive values will not trigger callback
+useShallowEffect(() => {}, [{ a: 1 }, { b: 2 }]);
+
+// Arrays with objects will trigger callback since values are not shallow equal
+useShallowEffect(() => {}, [[{ a: 1 }], [{ b: 2 }]]);
+```
+
+## Parameters
+
+`useShallowEffect` accepts the same parameters as `useEffect`.
+
+## Returns
+
+`useShallowEffect` returns the same value as `useEffect`.

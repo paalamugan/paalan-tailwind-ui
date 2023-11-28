@@ -1,0 +1,32 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-focus-within.stories';
+
+<Meta of={allStories} />
+
+# useFocusWithin
+
+`useFocusWithin` is a React hook that detects if any element within the other element has focus. It works the same way as `:focus-within` CSS selector:
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `options` - an object with the following properties:
+  - `onBlur` - a callback that is called when any element outside the other element loses focus
+  - `onFocus` - a callback that is called when any element inside the other element gains focus
+
+## Returns
+
+`useFocusWithin` returns a object with the following properties:
+
+- `ref` - a React ref that should be passed to the element that should be checked for focus within
+- `focused` - a boolean that indicates if any element within the other element has focus

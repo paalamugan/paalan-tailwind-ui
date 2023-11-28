@@ -1,0 +1,59 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-move.stories';
+
+<Meta of={allStories} />
+
+# useMove
+
+`useMove` is a React hook that allows you handles move behavior over any element, use to build custom sliders, color pickers, etc.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - Horizontal Slider
+
+<Canvas of={allStories.HorizontalSlider} />
+
+### Code - Horizontal Slider
+
+<Source of={allStories.HorizontalSlider} />
+
+## API
+
+The hook accepts a callback that is called when user moves pressed mouse over the given element and returns an object with `ref` and active state:
+
+```js
+const {
+  ref, // -> pass ref to target element
+  active, // -> is user changing something right now?
+} = useMove(({ x, y }) => setValue({ x, y }));
+```
+
+`x` and `y` values are always between `0` and `1`, you can use them to calculate value in your boundaries.
+
+## Parameters
+
+`useMove` accepts a three parameters:
+
+- `onChange` - A callback function that is called whenever the element is moved. The callback function is passed an object with the following properties:
+  - `x` - The current x position of the element.
+  - `y` - The current y position of the element.
+- `handlers` - Optional event handlers for scrubbing start and end.
+  - `onScrubStart` - A Callback function that is called when the scrubbing starts.
+  - `onScrubEnd` - A Callback function that is called when the scrubbing ends.
+- `dir` - `ltr` or `rtl` to indicate the direction of the scrubbing.
+
+## Returns
+
+`useMove` returns an object with the following properties:
+
+- `ref` - A ref that should be attached to the element that you want to move.
+- `active` - A boolean that indicates whether the element is currently being moved.

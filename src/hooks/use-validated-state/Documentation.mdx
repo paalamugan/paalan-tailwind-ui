@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-validated-state.stories';
+
+<Meta of={allStories} />
+
+# useValidatedState
+
+`useValidatedState` validates state with a given rule each time state is set. It returns an object with current validation state, last valid value and current value.
+
+```ts
+const [{ lastValidValue, value, valid }, setValue] = useValidatedState('valid', (value) => value === 'valid');
+
+lastValidValue; // -> valid
+value; // -> valid
+valid; // -> true
+
+setValue('invalid');
+
+lastValidValue; // -> valid
+value; // -> invalid
+valid; // -> false
+```
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+`useValidatedState` accepts three parameters:
+
+- `initialValue` - initial value of the state
+- `validate` - validation function that accepts current value and returns `true` or `false`
+- `initialValidationState` - initial validation state (optional)
+
+## Returns
+
+`useValidatedState` returns an array with two elements:
+
+- `state` - an object with current validation state, last valid value and current value
+
+  - `lastValidValue` - last valid value
+  - `value` - current value
+  - `valid` - current validation state
+
+- `onChange` - a function that accepts new value and updates state

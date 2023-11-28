@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-hash.stories';
+
+<Meta of={allStories} />
+
+# useHash
+
+`useHash` is a React hook that allows you to easily create a hash-based router.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - Initial State Value
+
+By default, `useHash` will retrieve value in `useEffect`. If you want to get initial value as soon as hook is called, set `getInitialValueInEffect` to `false`. Note that this option is not compatible with server side rendering – you can only use it if your app is client-side only.
+
+<Canvas of={allStories.InitialStateValue} />
+
+### Code - Initial State Value
+
+<Source of={allStories.InitialStateValue} />
+
+## Parameters
+
+`useHash` does not take any parameters.
+
+## Returns
+
+`useHash` returns an array with the following items:
+
+- `hash` - current hash value
+- `setHash` - function to set hash value

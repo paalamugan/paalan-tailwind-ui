@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-query-fetcher.stories';
+
+<Meta of={allStories} />
+
+# useQueryFetcher
+
+`useQueryFetcher` is a React hook that provides a way to fetch data from a query.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `handler` - A function that returns a promise that resolves to the data you want to fetch.
+- `options` - An object with the following properties:
+  - `skip` - A boolean indicating whether the handler should be called immediately. Defaults to `false`.
+  - `...restOptions` - Any other options you want to pass to `useQueryFetcher`.
+
+## Returns
+
+`useQueryFetcher` returns an object with the following properties:
+
+- `data` - The data returned by the handler.
+- `error` - The error returned by the handler.
+- `initialized` - A boolean indicating whether the handler has been called at least once.
+- `loading` - A boolean indicating whether the handler is currently being called.
+- `refetch` - A function that will trigger the handler to be called again.

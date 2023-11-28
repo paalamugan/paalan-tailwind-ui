@@ -1,0 +1,43 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-debounced-state.stories';
+
+<Meta of={allStories} />
+
+# useDebouncedState
+
+`useDebouncedState` is a hook debounces value changes. This can be useful in case you want to perform a heavy operation based on react state, for example, send search request. Unlike `useDebouncedValue` it is designed to work with uncontrolled components.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+### Example - Leading Update
+
+You can immediately update value with first call with `{ leading: true }` options.
+
+<Canvas of={allStories.LeadingUpdate} />
+
+### Code - Leading Update
+
+<Source of={allStories.LeadingUpdate} />
+
+## Parameters
+
+- `defaultValue` - The default value to return until the debounced value is updated.
+- `wait` - The number of milliseconds to wait before updating the debounced value.
+- `options` - The options to pass to the `useDebouncedState` hook.
+  - `leading` - Whether to update the debounced value immediately or not. Defaults to `false`.
+
+## Returns
+
+`useDebouncedState` returns a tuple containing the debounced `value` and a `debouncedSetValue` function to update the value.
+
+- `value` - The debounced value.
+- `debouncedSetValue` - A function to cancel the debounced update.

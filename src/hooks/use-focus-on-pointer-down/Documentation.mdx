@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source, Story } from '@storybook/blocks';
+
+import * as allStories from './use-focus-on-pointer-down.stories';
+
+<Meta of={allStories} />
+
+# useFocusOnPointerDown
+
+`useFocusOnPointerDown` is a React hook that will focus an element when the user clicks or taps on it. This is useful for accessibility, as it allows users to navigate your site using only a keyboard or other assistive device.
+
+## Usage
+
+### Example
+
+<Canvas of={allStories.Usage} />
+
+### Code
+
+<Source of={allStories.Usage} />
+
+## Parameters
+
+- `props` - An object containing the following properties:
+  - `enabled` - A boolean indicating whether the hook should be enabled. Defaults to `false`.
+  - `ref` - A React ref object that points to the element that should be focused. Defaults to `null`.
+  - `elements` - An array of React ref objects that point to elements that should be focused. Defaults to `[]`.
+
+## Returns
+
+`useFocusOnPointerDown` returns a nothing.
