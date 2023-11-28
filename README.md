@@ -2,6 +2,8 @@
 
 This is a collection of React components and hooks that used tailwindcss as CSS framework.
 
+[Storybook Website](https://tailwind-ui-storybook.paalamugan.com/)
+
 ## Installation
 
 - Node version >= 16.0.0 is required.
@@ -166,9 +168,9 @@ import { AcademicCapIcon } from '@paalan/tailwind-ui/icons/outline';
 
 ## Documentation
 
-- [Layouts](/docs/layouts-box--docs)
-- [Components](/docs/components-accordion--docs)
-- [Icons](/docs/system-icons--docs)
-- [Colors](/docs/system-colors--docs)
-- [Hooks](/docs/hooks-state-management-usecallbackref--documentation)
-- [Providers](/docs/providers-themeprovider--docs)
+- [Layouts](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/layouts-box--docs)
+- [Components](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/components-accordion--docs)
+- [Icons](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/system-icons--docs)
+- [Colors](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/system-colors--docs)
+- [Hooks](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/hooks-state-management-usecallbackref--documentation)
+- [Providers](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/providers-themeprovider--docs)
