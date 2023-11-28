@@ -251,7 +251,7 @@
   },
   "author": {
     "name": "paalamugan",
-    "email": "paalamugan44@gmail.com"
+    "email": "developer@paalamugan.com"
   },
   "repository": {
     "type": "git",
@@ -260,7 +260,7 @@
   "bugs": {
     "url": "https://github.com/paalamugan/paalan-tailwind-ui/issues"
   },
-  "homepage": "https://github.com/paalamugan/paalan-tailwind-ui#README",
+  "homepage": "https://github.com/paalamugan/paalan-tailwind-ui#readme",
   "files": [
     "dist"
   ],
