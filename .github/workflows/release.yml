@@ -39,8 +39,10 @@ jobs:
         # if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Build
-        run: npm run build:package
+      - name: Initialize Git User
+        run: |
+          git config --global user.name "paalamugan"
+          git config --global user.email "paalamugan44@gmail.com"
 
       - name: Initialize the NPM config
         run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
