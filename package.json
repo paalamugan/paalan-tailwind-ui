@@ -273,5 +273,15 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "tailwind",
+    "tailwindcss-components",
+    "tailwindcss-react",
+    "tailwindcss-react-components",
+    "storybook",
+    "react-components"
+  ]
 }
