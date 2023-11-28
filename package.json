@@ -1,6 +1,6 @@
 {
   "name": "@paalan/tailwind-ui",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "description": "This is a collection of React components and hooks that used tailwindcss as CSS framework.",
   "type": "module",
   "main": "dist/index.cjs",
@@ -272,8 +272,7 @@
   },
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "keywords": [
     "react",
