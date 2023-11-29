@@ -1,8 +1,8 @@
 # Paalan Tailwind UI
 
-This is a collection of React components and hooks that used tailwindcss as CSS framework.
+This is a collection of React components and hooks that used tailwindcss as CSS framework. You can checkout storybook website in [here](https://tailwind-ui-storybook.paalamugan.com/).
 
-[Storybook Website](https://tailwind-ui-storybook.paalamugan.com/).
+![image](https://github.com/paalamugan/paalan-tailwind-ui/assets/42642576/42a40446-a66b-47cb-8c1c-cbdb8ad86df1)
 
 ## Installation
 
