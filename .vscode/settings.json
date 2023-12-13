@@ -3,6 +3,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "prettier.prettierPath": "./node_modules/prettier/index.cjs",
+  "prettier.configPath": "./.prettierrc.cjs",
   "cSpell.words": [
     "autodocs",
     "Booleanish",
@@ -25,13 +26,24 @@
     "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
   },
   "eslint.validate": ["markdown", "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    {
-      "regex": "\"([^\"]*)\"ClassName",
-      "captureGroups": [1]
-    }
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "rowClassName",
+    "columnClassName",
+    "parentClassName",
+    "contentClassName",
+    "headerClassName",
+    "triggerClassName",
+    "labelClassName"
   ],
   "search.exclude": {
     "**/node_modules": true,
