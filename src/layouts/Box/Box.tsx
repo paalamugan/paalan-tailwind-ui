@@ -8,7 +8,7 @@ import { cn, objectStyledPropFilter } from '@/utils/helper';
 export interface BoxProps extends TailwindStyledComponentProps {}
 
 export const Box = forwardRef<BoxProps, 'div'>((props, ref) => {
-  const { as: Component = 'div', className, bg, color, borderColor, size, ...restProps } = props;
+  const { as: Component = 'div', className, bg, color, borderColor, fontSize, ...restProps } = props;
   const { styledProps, attrProps } = objectStyledPropFilter(restProps);
   const tailwindClassName = generateTailwindClassName(styledProps);
 
@@ -21,7 +21,7 @@ export const Box = forwardRef<BoxProps, 'div'>((props, ref) => {
           bg,
           color,
           borderColor,
-          size,
+          fontSize,
         }),
         tailwindClassName,
       )}

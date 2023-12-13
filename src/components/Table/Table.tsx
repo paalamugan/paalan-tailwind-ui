@@ -1,14 +1,18 @@
 import * as React from 'react';
 
+import type { BoxProps } from '@/layouts/Box';
+
+import { Box } from '@/layouts/Box';
+import { forwardRef } from '@/utils/forward-ref';
 import { cn } from '@/utils/helper';
 
-const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
-  ({ className, ...props }, ref) => (
-    <div className="w-full overflow-auto">
-      <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
-    </div>
-  ),
-);
+export interface TableProps extends BoxProps {}
+
+const Table = forwardRef<TableProps, 'table'>(({ className, ...props }, ref) => (
+  <Box className="w-full overflow-auto">
+    <Box as="table" ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
+  </Box>
+));
 Table.displayName = 'Table';
 
 const TableHeader = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(

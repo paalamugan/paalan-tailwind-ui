@@ -29,7 +29,7 @@ export const PaginationSizeOption: FC<PaginationSizeOptionProps> = ({
         options={options}
       />
 
-      <Text as="span" size="sm" className="whitespace-nowrap ">
+      <Text as="span" fontSize="sm" className="whitespace-nowrap ">
         {text || 'items per page'}
       </Text>
     </Flex>

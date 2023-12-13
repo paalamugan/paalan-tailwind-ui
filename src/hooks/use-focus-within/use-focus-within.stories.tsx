@@ -11,7 +11,7 @@ export function Usage() {
   return (
     <Box ref={ref}>
       <Box p="10" className={focused ? 'bg-blue-50' : 'bg-transparent'}>
-        <Text size="sm">One of elements has focus: {focused.toString()}</Text>
+        <Text fontSize="sm">One of elements has focus: {focused.toString()}</Text>
         <LabelInput
           label="Focus this input"
           placeholder="parent element of the background color will change when focus is"

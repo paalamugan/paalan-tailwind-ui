@@ -19,14 +19,14 @@ export function Usage() {
         label="Your email"
       />
 
-      <Text size="sm" mt="4">
+      <Text fontSize="sm" mt="4">
         <Text color="dimmed" as="span">
           Current value:
         </Text>{' '}
         {value || '[empty string]'}
       </Text>
 
-      <Text size="sm">
+      <Text fontSize="sm">
         <Text color="dimmed" as="span">
           Last valid value:
         </Text>{' '}

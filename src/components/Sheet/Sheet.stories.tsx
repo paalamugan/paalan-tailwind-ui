@@ -13,8 +13,33 @@ const meta: Meta<typeof Sheet> = {
     side: {
       options: ['top', 'bottom', 'left', 'right'],
       defaultValue: 'right',
+      description: 'The side of the screen the sheet will be displayed',
       control: {
         type: 'radio',
+      },
+    },
+    trigger: {
+      description: 'The trigger of the sheet, usually a button to open the sheet',
+      control: {
+        type: 'object',
+      },
+    },
+    header: {
+      description: 'The header of the sheet, title represents the main title and description is optional',
+      control: {
+        type: 'object',
+      },
+    },
+    children: {
+      description: 'The content of the sheet (usually a form or a list)',
+      control: {
+        type: 'object',
+      },
+    },
+    footer: {
+      description: 'The footer of the sheet, primaryAction is the main action and secondaryAction is optional',
+      control: {
+        type: 'object',
       },
     },
   },

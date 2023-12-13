@@ -6,7 +6,37 @@ const meta: Meta<typeof SimpleTable> = {
   title: 'components/SimpleTable',
   component: SimpleTable,
   tags: ['autodocs'],
+};
+export default meta;
+
+type Story = StoryObj<typeof SimpleTable>;
+
+export const Basic: Story = {
   args: {
+    primaryKey: 'invoice',
+    className: '',
+    columns: [
+      {
+        title: 'Invoice',
+        accessorKey: 'invoice',
+        className: 'w-[100px]',
+        rowClassName: 'font-medium',
+      },
+      {
+        title: 'Status',
+        accessorKey: 'paymentStatus',
+      },
+      {
+        title: 'Method',
+        accessorKey: 'paymentMethod',
+      },
+      {
+        title: 'Amount',
+        accessorKey: 'totalAmount',
+        className: 'text-right',
+        rowClassName: 'text-right',
+      },
+    ],
     rows: [
       {
         invoice: 'INV001',
@@ -51,44 +81,13 @@ const meta: Meta<typeof SimpleTable> = {
         paymentMethod: 'Credit Card',
       },
     ],
-    columns: [
-      {
-        title: 'Invoice',
-        accessorKey: 'invoice',
-        className: 'w-[100px]',
-        rowClassName: 'font-medium',
-      },
-      {
-        title: 'Status',
-        accessorKey: 'paymentStatus',
-      },
-      {
-        title: 'Method',
-        accessorKey: 'paymentMethod',
-      },
-      {
-        title: 'Amount',
-        accessorKey: 'totalAmount',
-        className: 'text-right',
-        rowClassName: 'text-right',
-      },
-    ],
-    primaryKey: 'invoice',
-  },
-  argTypes: {},
-};
-export default meta;
-
-type Story = StoryObj<typeof SimpleTable>;
-
-export const Basic: Story = {
-  args: {
     caption: '',
   },
 };
 
 export const WithCaption: Story = {
   args: {
+    ...Basic.args,
     caption: 'A list of your recent invoices.',
   },
 };

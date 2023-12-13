@@ -49,7 +49,7 @@ export const tailwindBoxVariants = cva<{
   bg: Record<BoxColorVariant, string>;
   color: Record<BoxColorVariant, string>;
   borderColor: Record<BoxColorVariant, string>;
-  size: Record<keyof FontSize, string>;
+  fontSize: Record<keyof FontSize, string>;
 }>('', {
   variants: {
     bg: {
@@ -160,7 +160,7 @@ export const tailwindBoxVariants = cva<{
       currentColor: 'border-current',
       dimmed: 'border-gray-500',
     },
-    size: {
+    fontSize: {
       xs: 'text-xs',
       '2xs': 'text-2xs',
       '3xs': 'text-3xs',

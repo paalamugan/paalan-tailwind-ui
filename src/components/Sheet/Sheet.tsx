@@ -97,7 +97,7 @@ const SheetDescription = React.forwardRef<
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
 
-interface SheetProps extends React.ComponentProps<typeof SheetRoot> {
+export interface SheetProps extends React.ComponentProps<typeof SheetRoot> {
   /**
    * The trigger element that will open the sheet
    */
@@ -106,8 +106,18 @@ interface SheetProps extends React.ComponentProps<typeof SheetRoot> {
    * The header of the sheet, title represents the main title and description is optional
    */
   header: {
+    /**
+     * The main title of the sheet
+     */
     title: React.ReactNode;
+    /**
+     * The description of the sheet
+     */
     description?: React.ReactNode;
+    /**
+     * The className of the sheet header, useful for adding padding
+     */
+    className?: string;
   };
   /**
    * The content of the sheet (usually a form or a list)
@@ -119,8 +129,18 @@ interface SheetProps extends React.ComponentProps<typeof SheetRoot> {
    * secondaryAction is usually a cancel button
    */
   footer?: {
+    /**
+     * The main action of the sheet (usually a submit button)
+     */
     primaryAction?: React.ReactNode;
+    /**
+     * The secondary action of the sheet (usually a cancel button)
+     */
     secondaryAction?: React.ReactNode;
+    /**
+     * The className of the sheet footer, useful for adding padding
+     */
+    className?: string;
   };
   /**
    * The side of the screen the sheet will be displayed
@@ -144,12 +164,12 @@ export const Sheet: React.FC<SheetProps> = ({
     <SheetRoot {...props}>
       <SheetTrigger asChild>{trigger}</SheetTrigger>
       <SheetContent side={side} className={className}>
-        <SheetHeader>
+        <SheetHeader className={header?.className}>
           <SheetTitle>{header.title}</SheetTitle>
           {header.description && <SheetDescription>{header.description}</SheetDescription>}
         </SheetHeader>
         {children}
-        <SheetFooter className="my-4">
+        <SheetFooter className={cn('my-4', footer?.className)}>
           {footer?.secondaryAction && <SheetClose asChild>{footer.secondaryAction}</SheetClose>}
           {footer?.primaryAction}
         </SheetFooter>

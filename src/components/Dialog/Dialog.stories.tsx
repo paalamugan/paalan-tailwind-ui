@@ -82,7 +82,7 @@ export const ContextMenuNote: Story = {
           <ContextMenuItem>Download</ContextMenuItem>
           <DialogTrigger asChild>
             <ContextMenuItem>
-              <Text as="span" size="sm">
+              <Text as="span" fontSize="sm">
                 Delete
               </Text>
             </ContextMenuItem>

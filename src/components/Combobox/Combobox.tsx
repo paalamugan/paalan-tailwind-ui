@@ -196,7 +196,7 @@ export const Combobox = React.forwardRef<React.ElementRef<'button'>, ComboboxPro
                 {localValue ? (
                   localOptions.find((option) => option.value === localValue)?.label
                 ) : (
-                  <Text size="sm" className="font-normal">
+                  <Text fontSize="sm" className="font-normal">
                     {placeholder}
                   </Text>
                 )}

@@ -6,7 +6,7 @@ This is a collection of React components and hooks that used tailwindcss as CSS 
 
 ## Installation
 
-- Node version >= 16.0.0 is required.
+- Node version >= 18.0.0 is required.
 
 ```bash
 nvm install 18 && nvm use 18
