@@ -11,22 +11,40 @@ const meta: Meta<typeof Alert> = {
   tags: ['autodocs'],
   argTypes: {
     colorVariant: {
+      description: 'Color variant of the alert',
       control: {
         type: 'select',
       },
       options: COLOR_VARIANTS,
     },
     softBackground: {
+      description: 'Soft background variant of the alert',
       control: {
         type: 'select',
       },
       options: COLOR_VARIANTS,
     },
     solidBackground: {
+      description: 'Solid background variant of the alert',
       control: {
         type: 'select',
       },
       options: COLOR_VARIANTS,
+    },
+    icon: {
+      description: 'Icon to display on the left side of the alert',
+    },
+    dismissible: {
+      description: 'Whether or not the alert is dismissible',
+      control: {
+        type: 'boolean',
+      },
+    },
+    description: {
+      description: 'Description of the alert',
+    },
+    title: {
+      description: 'Title of the alert',
     },
   },
 };

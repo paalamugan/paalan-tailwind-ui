@@ -19,10 +19,13 @@ const meta = {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  args: {
-    disabled: false,
-  },
   argTypes: {
+    disabled: {
+      description: 'Whether or not the button is disabled',
+      control: {
+        type: 'boolean',
+      },
+    },
     asChild: {
       description: 'Render the component as a child of the trigger.',
       table: {
@@ -96,7 +99,13 @@ const meta = {
       },
     },
     wrapperClassName: {
-      description: 'Optional wrapper class name for the button and icons (if any)',
+      description: 'Optional wrapper class name for the button text and icons (if any)',
+      control: {
+        type: 'text',
+      },
+    },
+    className: {
+      description: 'Optional class name for the button',
       control: {
         type: 'text',
       },
@@ -123,7 +132,8 @@ export const Basic: Story = {
     variant: 'solid',
     color: 'primary',
     isLoading: false,
-    innerClassName: '',
+    wrapperClassName: '',
+    disabled: false,
   },
 };
 

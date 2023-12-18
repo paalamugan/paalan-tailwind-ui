@@ -35,7 +35,25 @@ const meta = {
     ],
   },
   argTypes: {
-    type: { options: ['single', 'multiple'] },
+    items: {
+      description: 'Array of accordion items',
+      control: {
+        type: 'object',
+      },
+    },
+    collapsible: {
+      description: 'Whether or not the accordion is collapsible',
+      control: {
+        type: 'boolean',
+      },
+    },
+    type: {
+      description: 'Type of accordion (single or multiple)',
+      control: {
+        type: 'select',
+      },
+      options: ['single', 'multiple'],
+    },
   },
 } satisfies Meta<typeof Accordion>;
 
@@ -44,12 +62,15 @@ export default meta;
 type Story = StoryObj<typeof Accordion>;
 
 export const Basic: Story = {
-  args: {},
+  args: {
+    type: 'single',
+    collapsible: false,
+  },
 };
 
 export const WithSingleCollapsible: Story = {
   args: {
-    type: 'single',
+    ...Basic.args,
     collapsible: true,
   },
 };

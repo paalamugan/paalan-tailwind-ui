@@ -7,7 +7,7 @@ import { cva } from 'class-variance-authority';
 
 import { SolidCloseIcon } from '@/icons/custom';
 import { Box } from '@/layouts';
-import { cn } from '@/utils';
+import { cn, forwardRef } from '@/utils';
 
 import { IconButton } from '../IconButton';
 
@@ -18,7 +18,8 @@ const alertVariants = cva(
       colorVariant: {
         default: 'bg-background text-foreground',
         primary: 'border-primary/50 text-primary dark:border-primary [&>svg]:text-primary',
-        secondary: 'border-secondary/50 text-secondary dark:border-secondary [&>svg]:text-secondary',
+        secondary:
+          'border-secondary-foreground/50 text-secondary-foreground dark:border-secondary-foreground [&>svg]:text-secondary-foreground',
         tertiary: 'border-tertiary/50 text-tertiary dark:border-tertiary [&>svg]:text-tertiary',
         info: 'border-info/50 text-info dark:border-info [&>svg]:text-info',
         success: 'border-success/50 text-success dark:border-success [&>svg]:text-success',
@@ -94,7 +95,11 @@ export interface AlertProps extends Omit<React.ComponentPropsWithoutRef<typeof A
   /** onDismiss functions call when the alert is dismissed */
   onDismiss?: () => void;
 }
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
+
+/**
+ * Alerts are used to communicate a state that affects a system, feature, or page.
+ */
+export const Alert = forwardRef<AlertProps, 'div'>(
   ({ title, icon, dismissible, onDismiss, description, ...props }, ref) => {
     const [isDismissed, setIsDismissed] = React.useState(false);
 
@@ -124,4 +129,4 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   },
 );
 
-export { Alert, AlertDescription, AlertRoot, AlertTitle };
+export { AlertDescription, AlertRoot, AlertTitle };
