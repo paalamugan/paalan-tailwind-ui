@@ -6,10 +6,10 @@ This is a collection of React components and hooks that used tailwindcss as CSS 
 
 ## Installation
 
-- Node version >= 18.0.0 is required.
+- Node version >= 16.0.0 is required.
 
 ```bash
-nvm install 18 && nvm use 18
+nvm install 16 && nvm use 16
 ```
 
 - Install the package using npm. This package has peer dependencies on `react`, `react-dom` and `react-router-dom`.
