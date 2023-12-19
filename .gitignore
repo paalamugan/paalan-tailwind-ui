@@ -26,3 +26,5 @@ dist-ssr
 coverage
 storybook-static
 .npmrc
+# Local Netlify folder
+.netlify
