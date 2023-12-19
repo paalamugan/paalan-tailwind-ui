@@ -5,7 +5,7 @@ import type { TablePaginationOption } from './types';
 
 import { Button } from '@/components/Button';
 import { SelectContent, SelectItem, SelectRoot, SelectTrigger, SelectValue } from '@/components/Select';
-import { ChevronLeftIcon, ChevronRightIcon, DoubleArrowLeftIcon, DoubleArrowRightIcon } from '@/icons/icons';
+import { ChevronLeftIcon, ChevronRightIcon, DoubleArrowLeftIcon, DoubleArrowRightIcon } from '@/icons';
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;

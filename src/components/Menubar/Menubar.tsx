@@ -10,7 +10,7 @@ import type {
 
 import * as MenubarPrimitive from '@radix-ui/react-menubar';
 
-import { CheckIcon, ChevronRightIcon, DotFilledIcon } from '@/icons/icons';
+import { CheckIcon, ChevronRightIcon, DotFilledIcon } from '@/icons';
 import { cn } from '@/utils/helper';
 
 import { isMenubarMenuCheckbox, isMenubarMenuRadio, isMenubarMenuSeparator } from './helper';

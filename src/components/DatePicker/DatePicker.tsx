@@ -5,8 +5,7 @@ import { addDays, format } from 'date-fns';
 import { Button } from '@/components/Button';
 import { Calendar } from '@/components/Calendar';
 import { PopoverContent, PopoverRoot, PopoverTrigger } from '@/components/Popover';
-import { XCircleIcon } from '@/icons';
-import { CalendarIcon } from '@/icons/icons';
+import { CalendarIcon, XCircleIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

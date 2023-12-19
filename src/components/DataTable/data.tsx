@@ -4,12 +4,12 @@ import {
   ArrowDownIcon,
   ArrowRightIcon,
   ArrowUpIcon,
-  CheckCircledIcon,
+  CheckCircleIcon,
   CircleIcon,
   CrossCircledIcon,
   QuestionMarkCircledIcon,
   StopwatchIcon,
-} from '@/icons/icons';
+} from '@/icons';
 
 export const labels = [
   {
@@ -45,7 +45,7 @@ export const statuses = [
   {
     value: 'done',
     label: 'Done',
-    icon: CheckCircledIcon,
+    icon: CheckCircleIcon,
   },
   {
     value: 'canceled',

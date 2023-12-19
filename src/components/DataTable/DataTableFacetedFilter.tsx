@@ -1,7 +1,7 @@
 import type { Column } from '@tanstack/react-table';
 import type { DataTableLabelOption } from './types';
 
-import { CheckIcon, PlusCircledIcon } from '@/icons/icons';
+import { CheckIcon, PlusCircledIcon } from '@/icons';
 import { cn } from '@/utils/helper';
 
 import { Badge } from '../Badge';

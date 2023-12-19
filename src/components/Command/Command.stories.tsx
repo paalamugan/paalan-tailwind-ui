@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CalendarIcon, EnvelopeClosedIcon, FaceIcon, GearIcon, PersonIcon, RocketIcon } from '@/icons/icons';
+import { CalendarIcon, EnvelopeClosedIcon, FaceIcon, GearIcon, PersonIcon, RocketIcon } from '@/icons';
 import { Text } from '@/layouts';
 
 import { Command } from './Command';

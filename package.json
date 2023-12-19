@@ -208,20 +208,10 @@
       "require": "./dist/icons/index.cjs",
       "types": "./dist/icons/index.d.ts"
     },
-    "./icons/solid": {
-      "import": "./dist/icons/solid/index.js",
-      "require": "./dist/icons/solid/index.cjs",
-      "types": "./dist/icons/solid/index.d.ts"
-    },
-    "./icons/outline": {
-      "import": "./dist/icons/outline/index.js",
-      "require": "./dist/icons/outline/index.cjs",
-      "types": "./dist/icons/outline/index.d.ts"
-    },
-    "./icons/custom": {
-      "import": "./dist/icons/custom/index.js",
-      "require": "./dist/icons/custom/index.cjs",
-      "types": "./dist/icons/index.d.ts"
+    "./icons/*": {
+      "import": "./dist/icons/*/index.js",
+      "require": "./dist/icons/*/index.cjs",
+      "types": "./dist/icons/*/index.d.ts"
     },
     "./utils": {
       "import": "./dist/utils/index.js",

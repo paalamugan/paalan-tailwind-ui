@@ -1,8 +1,8 @@
 import * as React from 'react';
 
+import * as AllIconLists from '.';
 import { Input } from '../components/Input';
 import { Grid, Heading, Text, VStack } from '../layouts';
-import * as AllIconLists from './icons';
 
 export default {
   title: 'icons/AllIcons',

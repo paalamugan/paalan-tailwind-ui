@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CircleBackslashIcon } from '@/icons/icons';
+import { CircleBackslashIcon } from '@/icons';
 import { Box, LI, Text, UL } from '@/layouts';
 
 import {

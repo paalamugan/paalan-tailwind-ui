@@ -3,7 +3,7 @@ import { default as React, useEffect } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ChevronDownIcon, ChevronUpIcon } from '@/icons/icons';
+import { ChevronDownIcon, ChevronUpIcon } from '@/icons';
 import { Box } from '@/layouts';
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './Collapsible';

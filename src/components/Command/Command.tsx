@@ -6,7 +6,7 @@ import type { CommandGroupList } from './types';
 import { Command as CommandPrimitive } from 'cmdk';
 
 import { DialogContent, DialogRoot } from '@/components/Dialog/Dialog';
-import { MagnifyingGlassIcon } from '@/icons/icons';
+import { MagnifyingGlassIcon } from '@/icons';
 import { Text } from '@/layouts';
 import { cn } from '@/utils/helper';
 

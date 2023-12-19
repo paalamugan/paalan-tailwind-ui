@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import { LoadingIcon } from '@/icons/icons/LoadingIcon';
+import { LoadingIcon } from '@/icons/LoadingIcon';
 import { Flex } from '@/layouts';
 import { cn } from '@/utils/helper';
 

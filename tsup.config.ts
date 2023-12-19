@@ -25,8 +25,6 @@ export default defineConfig(() => {
         'src/layouts/index.ts',
         'src/hooks/index.ts',
         'src/icons/index.ts',
-        'src/icons/solid/index.ts',
-        'src/icons/outline/index.ts',
         'src/providers/index.ts',
         'src/test-utils/index.ts',
         'src/utils/index.ts',

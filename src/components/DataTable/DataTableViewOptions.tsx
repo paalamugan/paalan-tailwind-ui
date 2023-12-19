@@ -10,7 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/DropdownMenu';
-import { MixerHorizontalIcon } from '@/icons/icons';
+import { MixerHorizontalIcon } from '@/icons';
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;

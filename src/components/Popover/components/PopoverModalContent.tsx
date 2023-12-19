@@ -12,7 +12,7 @@ import {
   CommandModal,
 } from '@/components/Command';
 import { Loading } from '@/components/Loading';
-import { CheckIcon } from '@/icons/icons';
+import { CheckIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { cn } from '@/utils';
 

@@ -36,3 +36,4 @@ validatePackageExport('components', `'use client';\n\n`);
 validatePackageExport('hooks', `'use client';\n\n`);
 validatePackageExport('providers', `'use client';\n\n`);
 validatePackageExport('layouts');
+validatePackageExport('icons');

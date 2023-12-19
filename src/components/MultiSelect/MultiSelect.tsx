@@ -3,8 +3,7 @@ import * as React from 'react';
 import type { ComboboxProps } from '../Combobox';
 
 import { useCallbackRef } from '@/hooks';
-import { XMarkIcon } from '@/icons';
-import { CaretSortIcon } from '@/icons/icons';
+import { CaretSortIcon, XMarkIcon } from '@/icons';
 import { Box, Text } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

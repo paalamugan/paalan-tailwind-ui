@@ -6,7 +6,7 @@ import type { OptionType } from '@/types';
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 import { cva } from 'class-variance-authority';
 
-import { CheckIcon } from '@/icons/icons';
+import { CheckIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 
