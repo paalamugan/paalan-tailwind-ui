@@ -54,6 +54,18 @@ const meta = {
       },
       options: ['single', 'multiple'],
     },
+    className: {
+      description: 'The class name for the accordion',
+    },
+    itemClassName: {
+      description: 'The class name for the accordion item.',
+    },
+    triggerClassName: {
+      description: 'The class name for the accordion trigger.',
+    },
+    contentClassName: {
+      description: 'The class name for the accordion content.',
+    },
   },
 } satisfies Meta<typeof Accordion>;
 
