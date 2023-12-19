@@ -2,7 +2,7 @@ import { Text } from '@/layouts';
 
 import { useIsomorphicEffect } from './use-isomorphic-effect';
 
-export default { title: 'hooks/Life Cycle/useIsomorphicEffect' };
+export default { title: 'Hooks/Life Cycle/useIsomorphicEffect' };
 
 export function Usage() {
   useIsomorphicEffect(() => {

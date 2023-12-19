@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 import { useDocumentTitle } from './use-document-title';
 
-describe('hooks/use-document-title', () => {
+describe('Hooks/use-document-title', () => {
   it('sets given value as document.title', () => {
     renderHook(() => useDocumentTitle('test-title'));
     expect(document.title).toBe('test-title');

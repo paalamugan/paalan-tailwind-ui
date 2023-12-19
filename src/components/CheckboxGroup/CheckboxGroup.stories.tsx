@@ -8,7 +8,7 @@ import { COLOR_VARIANTS } from '@/constants';
 import { CheckboxGroup } from './CheckboxGroup';
 
 const meta: Meta<typeof CheckboxGroup> = {
-  title: 'components/CheckboxGroup',
+  title: 'Components/CheckboxGroup',
   component: CheckboxGroup,
   tags: ['autodocs'],
   argTypes: {

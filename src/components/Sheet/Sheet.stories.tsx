@@ -6,7 +6,7 @@ import { Label } from '../Label';
 import { Sheet } from './Sheet';
 
 const meta: Meta<typeof Sheet> = {
-  title: 'components/Sheet',
+  title: 'Components/Sheet',
   component: Sheet,
   tags: ['autodocs'],
   argTypes: {

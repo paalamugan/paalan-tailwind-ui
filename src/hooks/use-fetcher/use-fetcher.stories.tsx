@@ -3,7 +3,7 @@ import { Box, Code, Heading, Text } from '@/layouts';
 import { useFetcher } from './use-fetcher';
 
 export default {
-  title: 'hooks/Utilities/useFetcher',
+  title: 'Hooks/Utilities/useFetcher',
 };
 
 const fetcher = async (param: { id: string }) => {

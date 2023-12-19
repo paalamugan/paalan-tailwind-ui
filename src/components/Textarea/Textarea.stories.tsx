@@ -13,7 +13,7 @@ import { toast } from '../Toast';
 import { Textarea } from './Textarea';
 
 const meta: Meta<typeof Textarea> = {
-  title: 'components/Textarea',
+  title: 'Components/Textarea',
   component: Textarea,
   tags: ['autodocs'],
   argTypes: {},

@@ -6,7 +6,7 @@ import { randomId } from '@/utils';
 
 import { useTimeout } from './use-timeout';
 
-export default { title: 'hooks/Utilities/useTimeout' };
+export default { title: 'Hooks/Utilities/useTimeout' };
 
 export function Usage() {
   const [value, setValue] = useState('');

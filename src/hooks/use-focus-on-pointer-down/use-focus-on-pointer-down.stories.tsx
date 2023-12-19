@@ -6,7 +6,7 @@ import { Small, Stack } from '@/layouts';
 import { useFocusOnPointerDown } from './use-focus-on-pointer-down';
 
 export default {
-  title: 'hooks/UI And Dom/useFocusOnPointerDown',
+  title: 'Hooks/UI And Dom/useFocusOnPointerDown',
 };
 
 export function Usage() {

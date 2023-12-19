@@ -16,7 +16,7 @@ import {
 } from '.';
 
 export default {
-  title: 'components/Error',
+  title: 'Components/Error',
   tags: ['autodocs'],
 };
 

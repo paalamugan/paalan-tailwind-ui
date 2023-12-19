@@ -5,7 +5,7 @@ import { Input } from '../components/Input';
 import { Grid, Text, VStack } from '../layouts';
 
 export default {
-  title: 'icons/All Icons',
+  title: 'Icons/All Icons',
   tags: ['autodocs'],
   parameters: {
     controls: { disable: true }, // Hide the controls from the Canvas

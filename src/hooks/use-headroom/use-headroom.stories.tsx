@@ -2,7 +2,7 @@ import { Box, Portal, Stack, Strong, Text } from '@/layouts';
 
 import { useHeadroom } from './use-headroom';
 
-export default { title: 'hooks/Utilities/useHeadroom' };
+export default { title: 'Hooks/Utilities/useHeadroom' };
 
 export function Usage() {
   const pinned = useHeadroom({ fixedAt: 20 });

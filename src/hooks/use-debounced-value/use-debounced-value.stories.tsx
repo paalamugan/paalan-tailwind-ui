@@ -6,7 +6,7 @@ import { Box, Stack, Strong, Text } from '@/layouts';
 import { useDebouncedValue } from './use-debounced-value';
 
 export default {
-  title: 'hooks/State Management/useDebouncedValue',
+  title: 'Hooks/State Management/useDebouncedValue',
 };
 
 export function Usage() {

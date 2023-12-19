@@ -1,7 +1,7 @@
 import { useDocumentVisibility } from './use-document-visibility';
 
 export default {
-  title: 'hooks/Utilities/useDocumentVisibility',
+  title: 'Hooks/Utilities/useDocumentVisibility',
   component: useDocumentVisibility,
 };
 

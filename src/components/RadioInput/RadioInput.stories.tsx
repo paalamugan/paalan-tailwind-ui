@@ -9,7 +9,7 @@ import { Label } from '../Label';
 import { RadioInput } from './RadioInput';
 
 const meta: Meta<typeof RadioInput> = {
-  title: 'components/RadioInput',
+  title: 'Components/RadioInput',
   component: RadioInput,
   tags: ['autodocs'],
   argTypes: {},

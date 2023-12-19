@@ -3,7 +3,7 @@ import { Code, Heading, Stack } from '@/layouts';
 
 import { useQueue } from './use-queue';
 
-export default { title: 'hooks/State Management/useQueue' };
+export default { title: 'Hooks/State Management/useQueue' };
 
 export function Usage() {
   const { state, queue, add, update, cleanQueue } = useQueue({

@@ -4,7 +4,7 @@ import { Flex, Small, Stack, Text } from '@/layouts';
 import { useCounter } from './use-counter';
 
 export default {
-  title: 'hooks/State Management/useCounter',
+  title: 'Hooks/State Management/useCounter',
 };
 
 export function Usage() {

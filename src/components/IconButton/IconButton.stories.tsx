@@ -5,7 +5,7 @@ import { AccessibilityIcon } from '@/icons';
 import { IconButton } from './IconButton';
 
 const meta: Meta<typeof IconButton> = {
-  title: 'components/IconButton',
+  title: 'Components/IconButton',
   component: IconButton,
   tags: ['autodocs'],
 };

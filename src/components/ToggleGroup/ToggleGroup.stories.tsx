@@ -5,7 +5,7 @@ import { COLOR_VARIANTS } from '@/constants';
 import { ToggleGroup } from './ToggleGroup';
 
 const meta: Meta<typeof ToggleGroup> = {
-  title: 'components/ToggleGroup',
+  title: 'Components/ToggleGroup',
   component: ToggleGroup,
   tags: ['autodocs'],
   argTypes: {

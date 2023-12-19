@@ -3,7 +3,7 @@ import { Box, Heading, Text } from '@/layouts';
 import { useFavicon } from './use-favicon';
 
 export default {
-  title: 'hooks/Utilities/useFavicon',
+  title: 'Hooks/Utilities/useFavicon',
 };
 
 export function Usage() {

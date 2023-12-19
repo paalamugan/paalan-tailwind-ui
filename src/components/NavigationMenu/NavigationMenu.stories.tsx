@@ -15,7 +15,7 @@ import {
 } from '.';
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: 'components/NavigationMenu',
+  title: 'Components/NavigationMenu',
   component: NavigationMenu,
   tags: ['autodocs'],
 

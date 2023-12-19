@@ -35,7 +35,7 @@ import { useFormatIntl } from './context';
 import { FormatIntlProvider } from './FormatIntlProvider';
 
 const meta = {
-  title: 'providers/FormatIntlProvider',
+  title: 'Providers/FormatIntlProvider',
   component: FormatIntlProvider,
 } satisfies Meta<typeof FormatIntlProvider>;
 

@@ -4,7 +4,7 @@ import { Box, Text } from '@/layouts';
 import { useDisclosure } from './use-disclosure';
 
 export default {
-  title: 'hooks/State Management/useDisclosure',
+  title: 'Hooks/State Management/useDisclosure',
 };
 
 export function Usage() {

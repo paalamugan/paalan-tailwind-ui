@@ -5,7 +5,7 @@ import { Text } from '../Text';
 import { Portal } from './Portal';
 
 const meta: Meta<typeof Portal> = {
-  title: 'layouts/Portal',
+  title: 'Layouts/Portal',
   component: Portal,
   tags: ['autodocs'],
 };

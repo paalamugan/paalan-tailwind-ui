@@ -41,16 +41,16 @@ const preview = {
     options: {
       // storySort: (a, b) => (a.id === b.id ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true })),
       storySort: {
-        method: 'alphabetical',
         order: [
-          'system',
+          'System',
           ['Getting Started', 'Colors'],
-          'layouts',
-          'components',
-          'icons',
-          'hooks',
+          'Layouts',
+          'Components',
+          'Icons',
+          'Hooks',
           ['State Management', 'UI And Dom', 'Utilities', 'Life Cycle'],
-          'providers',
+          'Providers',
+          ['ThemeProvider', 'MsalAuthProvider', 'FormatIntlProvider'],
         ],
         locales: 'en-US',
       },

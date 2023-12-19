@@ -9,7 +9,7 @@ import { Flex, Stack } from '@/layouts';
 import { useClipboard } from './use-clipboard';
 
 export default {
-  title: 'hooks/Utilities/useClipboard',
+  title: 'Hooks/Utilities/useClipboard',
 };
 
 export function Usage() {

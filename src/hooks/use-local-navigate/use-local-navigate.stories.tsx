@@ -1,6 +1,6 @@
 import { useLocalNavigate } from './use-local-navigate';
 
-export default { title: 'hooks/Utilities/useLocalNavigate' };
+export default { title: 'Hooks/Utilities/useLocalNavigate' };
 
 export function Usage() {
   const navigate = useLocalNavigate();

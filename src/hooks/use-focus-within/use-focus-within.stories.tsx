@@ -4,7 +4,7 @@ import { Box, Text } from '@/layouts';
 
 import { useFocusWithin } from './use-focus-within';
 
-export default { title: 'hooks/UI And Dom/useFocusWithin' };
+export default { title: 'Hooks/UI And Dom/useFocusWithin' };
 
 export function Usage() {
   const { ref, focused } = useFocusWithin<HTMLDivElement>();

@@ -1,7 +1,7 @@
 import { useDocumentTitle } from './use-document-title';
 
 export default {
-  title: 'hooks/Utilities/useDocumentTitle',
+  title: 'Hooks/Utilities/useDocumentTitle',
 };
 
 export function Usage() {

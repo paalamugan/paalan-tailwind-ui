@@ -12,7 +12,7 @@ const setupTimer = (timeout: number = defaultTimeout) => ({
   advanceTimerToNextTick: () => jest.advanceTimersByTime(timeout),
 });
 
-describe('hooks/use-timeout', () => {
+describe('Hooks/use-timeout', () => {
   beforeAll(() => {
     jest.useFakeTimers();
     jest.spyOn(global, 'setTimeout');

@@ -3,7 +3,7 @@ import { Heading, Stack, VStack } from '@/layouts';
 
 import { useId } from './use-id';
 
-export default { title: 'hooks/State Management/useId' };
+export default { title: 'Hooks/State Management/useId' };
 
 export function Usage() {
   function Input({ id }: { id?: string }) {

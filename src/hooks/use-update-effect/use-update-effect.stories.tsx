@@ -4,7 +4,7 @@ import { Stack, Text } from '@/layouts';
 import { useUpdateEffect } from '.';
 import { useInputState } from '../use-input-state';
 
-export default { title: 'hooks/Life Cycle/useUpdateEffect' };
+export default { title: 'Hooks/Life Cycle/useUpdateEffect' };
 
 export function Usage() {
   const [value, setValue] = useInputState('John');

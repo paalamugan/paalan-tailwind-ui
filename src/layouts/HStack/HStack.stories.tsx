@@ -5,7 +5,7 @@ import boxStories from '../Box/Box.stories';
 import { HStack } from './HStack';
 
 const meta: Meta<typeof HStack> = {
-  title: 'layouts/HStack',
+  title: 'Layouts/HStack',
   component: HStack,
   tags: ['autodocs'],
   argTypes: {

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AspectRatio } from './AspectRatio';
 
 const meta: Meta<typeof AspectRatio> = {
-  title: 'components/AspectRatio',
+  title: 'Components/AspectRatio',
   component: AspectRatio,
   tags: ['autodocs'],
   argTypes: {},

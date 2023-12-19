@@ -4,7 +4,7 @@ import { Heading, Stack } from '@/layouts';
 
 import { useLatestValue } from '.';
 
-export default { title: 'hooks/State Management/useLatestValue' };
+export default { title: 'Hooks/State Management/useLatestValue' };
 
 export function Usage() {
   const [count, setCount] = React.useState(0);

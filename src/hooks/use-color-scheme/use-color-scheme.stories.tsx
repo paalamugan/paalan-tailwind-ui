@@ -1,7 +1,7 @@
 import { useColorScheme } from './use-color-scheme';
 
 export default {
-  title: 'hooks/UI And Dom/useColorScheme',
+  title: 'Hooks/UI And Dom/useColorScheme',
 };
 
 export function Usage() {

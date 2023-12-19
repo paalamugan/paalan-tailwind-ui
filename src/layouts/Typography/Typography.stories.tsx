@@ -27,7 +27,7 @@ import {
 } from './Typography';
 
 const meta: Meta = {
-  title: 'layouts/Typography',
+  title: 'Layouts/Typography',
   tags: ['autodocs'],
   argTypes: {},
 };

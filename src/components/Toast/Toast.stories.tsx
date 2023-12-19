@@ -6,7 +6,7 @@ import { toast, Toaster } from '.';
 import { Button } from '../Button';
 
 const meta: Meta<typeof Toaster> = {
-  title: 'components/Toast',
+  title: 'Components/Toast',
   component: Toaster,
   tags: ['autodocs'],
   argTypes: {},

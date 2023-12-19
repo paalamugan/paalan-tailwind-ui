@@ -5,7 +5,7 @@ import { COLOR_VARIANTS } from '@/constants';
 import { RadioGroup } from './RadioGroup';
 
 const meta: Meta<typeof RadioGroup> = {
-  title: 'components/RadioGroup',
+  title: 'Components/RadioGroup',
   component: RadioGroup,
   tags: ['autodocs'],
   argTypes: {

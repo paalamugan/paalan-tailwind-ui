@@ -3,7 +3,7 @@ import { Heading, Stack } from '@/layouts';
 
 import { useSetState } from '.';
 
-export default { title: 'hooks/State Management/useSetState' };
+export default { title: 'Hooks/State Management/useSetState' };
 
 export function Usage() {
   const [state, setState] = useSetState({ name: 'John', age: 35, job: 'Engineer' });

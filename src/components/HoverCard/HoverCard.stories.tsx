@@ -8,7 +8,7 @@ import { Button } from '../Button';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './HoverCard';
 
 const meta: Meta<typeof HoverCard> = {
-  title: 'components/HoverCard',
+  title: 'Components/HoverCard',
   component: HoverCard,
   tags: ['autodocs'],
   parameters: {

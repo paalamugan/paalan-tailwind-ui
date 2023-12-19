@@ -11,7 +11,7 @@ import { toast } from '../Toast';
 import { Switch } from './Switch';
 
 const meta: Meta<typeof Switch> = {
-  title: 'components/Switch',
+  title: 'Components/Switch',
   component: Switch,
   tags: ['autodocs'],
   argTypes: {

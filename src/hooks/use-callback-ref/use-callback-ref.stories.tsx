@@ -5,7 +5,7 @@ import { Box, Text } from '@/layouts';
 import { useCallbackRef } from './use-callback-ref';
 
 export default {
-  title: 'hooks/State Management/useCallbackRef',
+  title: 'Hooks/State Management/useCallbackRef',
 };
 
 const ChildComponentWithUseCallbackRef = ({ autoIncrement, count }: { autoIncrement: VoidFunction; count: number }) => {

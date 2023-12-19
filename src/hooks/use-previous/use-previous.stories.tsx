@@ -4,7 +4,7 @@ import { Box, Text } from '@/layouts';
 import { useInputState } from '../use-input-state';
 import { usePrevious } from './use-previous';
 
-export default { title: 'hooks/State Management/usePrevious' };
+export default { title: 'Hooks/State Management/usePrevious' };
 
 export function Usage() {
   const [value, setValue] = useInputState('');

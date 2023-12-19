@@ -8,7 +8,7 @@ import { Select } from '../Select';
 import { Card as CardComponent } from './Card';
 
 const meta: Meta<typeof CardComponent> = {
-  title: 'components/Card',
+  title: 'Components/Card',
   component: CardComponent,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

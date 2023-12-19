@@ -9,7 +9,7 @@ import { Text } from '@/layouts';
 import { Command } from './Command';
 
 const meta: Meta<typeof Command> = {
-  title: 'components/Command',
+  title: 'Components/Command',
   component: Command,
   parameters: {
     layout: 'centered',

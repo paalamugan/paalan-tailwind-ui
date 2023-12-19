@@ -2,7 +2,7 @@ import { Text } from '@/layouts';
 
 import { useViewportSize } from './use-viewport-size';
 
-export default { title: 'hooks/UI And Dom/useViewportSize' };
+export default { title: 'Hooks/UI And Dom/useViewportSize' };
 
 export function Usage() {
   const { height, width } = useViewportSize();

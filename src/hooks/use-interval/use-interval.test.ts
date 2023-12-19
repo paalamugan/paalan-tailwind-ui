@@ -19,7 +19,7 @@ const setupHook = (
   options?: UseIntervalOption,
 ) => renderHook(() => useInterval(cb, timeout, options));
 
-describe('hooks/use-interval', () => {
+describe('Hooks/use-interval', () => {
   beforeAll(() => {
     jest.useFakeTimers();
     jest.spyOn(global, 'setInterval');

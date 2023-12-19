@@ -5,7 +5,7 @@ import { Stack, Text } from '@/layouts';
 
 import { getHotkeyHandler, useHotkeys } from './use-hotkeys';
 
-export default { title: 'hooks/UI And Dom/useHotkeys' };
+export default { title: 'Hooks/UI And Dom/useHotkeys' };
 
 export function Usage() {
   // ctrl + J and ⌘ + J to toggle color scheme

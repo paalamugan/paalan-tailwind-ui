@@ -4,7 +4,7 @@ import { randomId } from '@/utils';
 
 import { useForceUpdate } from './use-force-update';
 
-export default { title: 'hooks/Life Cycle/useForceUpdate' };
+export default { title: 'Hooks/Life Cycle/useForceUpdate' };
 
 export function Usage() {
   const forceUpdate = useForceUpdate();

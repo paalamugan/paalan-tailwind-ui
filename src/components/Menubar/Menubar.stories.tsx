@@ -18,7 +18,7 @@ import {
 } from './Menubar';
 
 const meta: Meta<typeof Menubar> = {
-  title: 'components/Menubar',
+  title: 'Components/Menubar',
   component: Menubar,
   tags: ['autodocs'],
   argTypes: {},

@@ -3,7 +3,7 @@ import { Box, Center, Paper, Text } from '@/layouts';
 
 import { useScrollIntoView } from './use-scroll-into-view';
 
-export default { title: 'hooks/UI And Dom/useScrollIntoView' };
+export default { title: 'Hooks/UI And Dom/useScrollIntoView' };
 
 export function Usage() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({

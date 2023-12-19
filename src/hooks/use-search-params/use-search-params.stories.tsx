@@ -2,7 +2,7 @@ import { Code, Heading, Stack } from '@/layouts';
 
 import { useSearchParams } from './use-search-params';
 
-export default { title: 'hooks/Utilities/useSearchParams' };
+export default { title: 'Hooks/Utilities/useSearchParams' };
 
 export function Usage() {
   const searchParams = useSearchParams();

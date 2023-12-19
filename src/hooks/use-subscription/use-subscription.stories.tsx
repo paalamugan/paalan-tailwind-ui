@@ -6,7 +6,7 @@ import { Text } from '@/layouts';
 
 import { useSubscription } from './use-subscription';
 
-export default { title: 'hooks/Utilities/useSubscription' };
+export default { title: 'Hooks/Utilities/useSubscription' };
 
 export function Usage() {
   const options: UseSubscriptionOptions = {

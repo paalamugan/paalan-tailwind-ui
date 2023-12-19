@@ -1,7 +1,7 @@
 import { Pagination } from '@/components/Pagination';
 import { Box, Text, VStack } from '@/layouts';
 
-export default { title: 'hooks/State Management/usePagination' };
+export default { title: 'Hooks/State Management/usePagination' };
 
 export function Usage() {
   return <Pagination total={200} siblings={1} initialPage={10} />;

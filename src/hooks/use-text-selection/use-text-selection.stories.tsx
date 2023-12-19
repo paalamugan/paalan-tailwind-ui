@@ -3,7 +3,7 @@ import { P, Strong } from '@/layouts/Typography';
 
 import { useTextSelection } from './use-text-selection';
 
-export default { title: 'hooks/Utilities/useTextSelection' };
+export default { title: 'Hooks/Utilities/useTextSelection' };
 
 export function Usage() {
   const selection = useTextSelection();

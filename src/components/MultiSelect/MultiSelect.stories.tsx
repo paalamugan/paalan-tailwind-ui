@@ -43,7 +43,7 @@ const options = [
   },
 ];
 const meta: Meta<typeof MultiSelect> = {
-  title: 'components/MultiSelect',
+  title: 'Components/MultiSelect',
   component: MultiSelect,
   tags: ['autodocs'],
   argTypes: {},

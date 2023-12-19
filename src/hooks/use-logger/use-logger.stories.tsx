@@ -5,7 +5,7 @@ import { Stack, Text } from '@/layouts';
 
 import { useLogger } from './use-logger';
 
-export default { title: 'hooks/Life Cycle/useLogger' };
+export default { title: 'Hooks/Life Cycle/useLogger' };
 
 export function Usage() {
   const [count, setCount] = useState(0);

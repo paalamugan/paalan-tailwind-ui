@@ -3,7 +3,7 @@ import { Box, Text } from '@/layouts';
 
 import { useValidatedState } from './use-validated-state';
 
-export default { title: 'hooks/State Management/useValidatedState' };
+export default { title: 'Hooks/State Management/useValidatedState' };
 
 export function Usage() {
   const [{ value, lastValidValue, valid }, setEmail] = useValidatedState('', (val) => /^\S+@\S+$/.test(val), true);

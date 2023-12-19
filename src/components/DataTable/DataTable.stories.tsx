@@ -6,7 +6,7 @@ import { priorities, statuses, tasks } from './data';
 import { DataTable } from './DataTable';
 
 const meta: Meta<typeof DataTable<Task, unknown>> = {
-  title: 'components/DataTable',
+  title: 'Components/DataTable',
   component: DataTable,
   args: {
     columns: columns,

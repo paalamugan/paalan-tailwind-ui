@@ -62,6 +62,10 @@ interface AccordionItem {
   title: React.ReactNode;
   /** The content of the Accordion item. */
   content: React.ReactNode;
+  /**
+   * The class name to apply to the Accordion item, this classname overrides the default classname.
+   */
+  className?: string;
 }
 /**
  * Props for the Accordion component.
@@ -79,18 +83,36 @@ type AccordionProps = React.ComponentProps<typeof AccordionRoot> & {
    * @default false
    */
   collapsible?: boolean;
+  /**
+   * The class name to apply to the Accordion trigger.
+   */
+  triggerClassName?: string;
+  /**
+   * The class name to apply to the Accordion content.
+   */
+  contentClassName?: string;
+  /**
+   * The class name to apply to the all Accordion item.
+   */
+  itemClassName?: string;
 };
 
 /**
  * Renders an accordion component with the given items.
  */
-const Accordion: React.FC<AccordionProps> = ({ items, ...props }) => {
+const Accordion: React.FC<AccordionProps> = ({
+  items,
+  triggerClassName,
+  contentClassName,
+  itemClassName,
+  ...props
+}) => {
   return (
     <AccordionRoot {...props}>
       {items.map((item) => (
-        <AccordionItem key={item.value} value={item.value}>
-          <AccordionTrigger>{item.title}</AccordionTrigger>
-          <AccordionContent>{item.content}</AccordionContent>
+        <AccordionItem key={item.value} value={item.value} className={cn(itemClassName, item.className)}>
+          <AccordionTrigger className={triggerClassName}>{item.title}</AccordionTrigger>
+          <AccordionContent className={contentClassName}>{item.content}</AccordionContent>
         </AccordionItem>
       ))}
     </AccordionRoot>

@@ -4,7 +4,7 @@ import { Box, Text } from '@/layouts';
 import { useDebouncedState } from './use-debounced-state';
 
 export default {
-  title: 'hooks/State Management/useDebouncedState',
+  title: 'Hooks/State Management/useDebouncedState',
 };
 
 export function Usage() {

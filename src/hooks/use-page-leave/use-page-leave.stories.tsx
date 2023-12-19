@@ -4,7 +4,7 @@ import { Text } from '@/layouts';
 
 import { usePageLeave } from './use-page-leave';
 
-export default { title: 'hooks/Utilities/usePageLeave' };
+export default { title: 'Hooks/Utilities/usePageLeave' };
 
 export function Usage() {
   const [leftsCount, setLeftsCount] = useState(0);

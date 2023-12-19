@@ -5,7 +5,7 @@ import { Box, Flex, Stack, Strong } from '@/layouts';
 
 import { useEyeDropper } from './use-eye-dropper';
 
-export default { title: 'hooks/Utilities/useEyeDropper' };
+export default { title: 'Hooks/Utilities/useEyeDropper' };
 
 export function Usage() {
   const [color, setColor] = useState('');

@@ -2,7 +2,7 @@ import { Box, Center, Code, Text } from '@/layouts';
 
 import { useMouse } from './use-mouse';
 
-export default { title: 'hooks/UI And Dom/useMouse' };
+export default { title: 'Hooks/UI And Dom/useMouse' };
 
 export function Usage() {
   const { ref, x, y } = useMouse();

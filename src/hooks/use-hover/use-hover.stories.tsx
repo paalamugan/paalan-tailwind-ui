@@ -2,7 +2,7 @@ import { Box } from '@/layouts';
 
 import { useHover } from './use-hover';
 
-export default { title: 'hooks/UI And Dom/useHover' };
+export default { title: 'Hooks/UI And Dom/useHover' };
 
 export function Usage() {
   const { hovered, ref } = useHover();

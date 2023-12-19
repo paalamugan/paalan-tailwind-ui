@@ -5,7 +5,7 @@ import boxStory from '@/layouts/Box/Box.stories';
 import { Badge } from './Badge';
 
 const meta: Meta<typeof Badge> = {
-  title: 'components/Badge',
+  title: 'Components/Badge',
   component: Badge,
   tags: ['autodocs'],
   argTypes: {

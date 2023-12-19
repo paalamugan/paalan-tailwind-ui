@@ -4,7 +4,7 @@ import { Box, Heading, Stack, VStack } from '@/layouts';
 import { useFocusTrap } from './use-focus-trap';
 
 export default {
-  title: 'hooks/UI And Dom/useFocusTrap',
+  title: 'Hooks/UI And Dom/useFocusTrap',
 };
 
 export function UsageWithFocusTrapEnabled() {

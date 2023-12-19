@@ -5,7 +5,7 @@ import { Paper } from '@/layouts/Paper';
 
 import { useIntersection } from './use-intersection';
 
-export default { title: 'hooks/UI And Dom/useIntersection' };
+export default { title: 'Hooks/UI And Dom/useIntersection' };
 
 export function Usage() {
   const containerRef = useRef<HTMLDivElement>(null);

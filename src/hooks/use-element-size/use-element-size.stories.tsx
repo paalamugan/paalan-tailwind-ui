@@ -3,7 +3,7 @@ import { Center, Text } from '@/layouts';
 
 import { useElementSize } from './use-element-size';
 
-export default { title: 'hooks/UI And Dom/useElementSize' };
+export default { title: 'Hooks/UI And Dom/useElementSize' };
 
 export function Usage() {
   const { ref, width, height } = useElementSize<HTMLTextAreaElement>();

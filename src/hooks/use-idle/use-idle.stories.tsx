@@ -2,7 +2,7 @@ import { Badge } from '@/components/Badge';
 
 import { useIdle } from './use-idle';
 
-export default { title: 'hooks/Utilities/useIdle' };
+export default { title: 'Hooks/Utilities/useIdle' };
 
 export function Usage() {
   const idle = useIdle(2000);

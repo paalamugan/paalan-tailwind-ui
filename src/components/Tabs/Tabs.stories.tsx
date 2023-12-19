@@ -9,7 +9,7 @@ import { Label } from '../Label';
 import { Tabs } from './Tabs';
 
 const meta: Meta<typeof Tabs> = {
-  title: 'components/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
   tags: ['autodocs'],
 

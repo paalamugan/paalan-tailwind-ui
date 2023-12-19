@@ -6,7 +6,7 @@ import { RocketIcon } from '@/icons';
 import { Alert } from './Alert';
 
 const meta: Meta<typeof Alert> = {
-  title: 'components/Alert',
+  title: 'Components/Alert',
   component: Alert,
   tags: ['autodocs'],
   argTypes: {

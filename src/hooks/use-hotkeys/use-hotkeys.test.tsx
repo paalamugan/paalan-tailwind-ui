@@ -7,7 +7,7 @@ const dispatchEvent = <T extends KeyboardEventInit>(data: T) => {
   document.documentElement.dispatchEvent(event);
 };
 
-describe('hooks/use-hotkey', () => {
+describe('Hooks/use-hotkey', () => {
   it('should listen to document events', () => {
     const handler = jest.fn();
     renderHook(() => useHotkeys([['shift+ctrl+S', handler]]));

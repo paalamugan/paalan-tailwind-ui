@@ -5,7 +5,7 @@ import { Button, Dialog } from '@/components';
 import { useFocusReturn } from './use-focus-return';
 
 export default {
-  title: 'hooks/UI And Dom/useFocusReturn',
+  title: 'Hooks/UI And Dom/useFocusReturn',
 };
 
 export function Usage() {

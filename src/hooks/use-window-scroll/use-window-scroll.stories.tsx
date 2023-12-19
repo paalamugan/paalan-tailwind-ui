@@ -3,7 +3,7 @@ import { Center, Text } from '@/layouts';
 
 import { useWindowScroll } from './use-window-scroll';
 
-export default { title: 'hooks/UI And Dom/useWindowScroll' };
+export default { title: 'Hooks/UI And Dom/useWindowScroll' };
 
 export function Usage() {
   const [scroll, scrollTo] = useWindowScroll();

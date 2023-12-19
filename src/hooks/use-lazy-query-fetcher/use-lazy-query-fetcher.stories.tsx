@@ -3,7 +3,7 @@ import { Box, Code, Heading, Text } from '@/layouts';
 
 import { useLazyQueryFetcher } from './use-lazy-query-fetcher';
 
-export default { title: 'hooks/Utilities/useLazyQueryFetcher' };
+export default { title: 'Hooks/Utilities/useLazyQueryFetcher' };
 
 const getData = async (param: { id: string }) => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${param.id}`);

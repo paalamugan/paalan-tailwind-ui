@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 import { useScrollLock } from './use-scroll-lock';
 
-describe('hooks/use-scroll-lock', () => {
+describe('Hooks/use-scroll-lock', () => {
   // Clean up dom as jest does not do this automatically
   afterEach(() => {
     document.getElementsByTagName('html')[0].innerHTML = '';

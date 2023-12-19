@@ -4,7 +4,7 @@ import { randomId } from '@/utils';
 
 import { useListState } from '.';
 
-export default { title: 'hooks/State Management/useListState' };
+export default { title: 'Hooks/State Management/useListState' };
 
 export function Usage() {
   const [

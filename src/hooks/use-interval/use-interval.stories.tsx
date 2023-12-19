@@ -5,7 +5,7 @@ import { Stack, Text } from '@/layouts';
 
 import { useInterval } from './use-interval';
 
-export default { title: 'hooks/Utilities/useInterval' };
+export default { title: 'Hooks/Utilities/useInterval' };
 
 export function Usage() {
   const [seconds, setSeconds] = useState(0);

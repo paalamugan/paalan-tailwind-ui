@@ -9,7 +9,7 @@ import { patchConsoleError } from '@/utils/patch-console-error';
 
 import { useFocusTrap } from './use-focus-trap';
 
-describe('hooks/use-focus-trap', () => {
+describe('Hooks/use-focus-trap', () => {
   function InnerComponent({ testId }: { testId: string }) {
     const ref = useFocusTrap();
     return (

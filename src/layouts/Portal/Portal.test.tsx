@@ -2,7 +2,7 @@ import { render, tests } from '@/test-utils';
 
 import { Portal } from './Portal';
 
-describe('components/Portal', () => {
+describe('Components/Portal', () => {
   tests.itSupportsRef({
     component: Portal,
     props: { children: 'test' },

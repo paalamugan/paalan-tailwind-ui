@@ -5,7 +5,7 @@ import { Stack } from '@/layouts';
 
 import { useInputState } from './use-input-state';
 
-export default { title: 'hooks/State Management/useInputState' };
+export default { title: 'Hooks/State Management/useInputState' };
 
 export function Usage() {
   const [stringValue, setStringValue] = useInputState('');

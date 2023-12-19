@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LabelInput } from '../LabelInput';
 
 const meta: Meta<typeof LabelInput> = {
-  title: 'components/LabelInput',
+  title: 'Components/LabelInput',
   component: LabelInput,
   tags: ['autodocs'],
   argTypes: {},

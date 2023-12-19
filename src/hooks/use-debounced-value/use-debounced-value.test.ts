@@ -2,7 +2,7 @@ import { act, renderHook } from '@testing-library/react';
 
 import { useDebouncedValue } from './use-debounced-value';
 
-describe('hooks/useDebouncedValue', () => {
+describe('Hooks/useDebouncedValue', () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });

@@ -8,7 +8,7 @@ import { Label } from '../Label';
 import { Popover, PopoverContent, PopoverRoot, PopoverTrigger } from './Popover';
 
 const meta: Meta<typeof Popover> = {
-  title: 'components/Popover',
+  title: 'Components/Popover',
   component: Popover,
   tags: ['autodocs'],
   parameters: {

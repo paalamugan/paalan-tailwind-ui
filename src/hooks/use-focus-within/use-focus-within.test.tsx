@@ -16,7 +16,7 @@ function Wrapper(props: UseFocusWithinOptions) {
   );
 }
 
-describe('hooks/use-focus-within', () => {
+describe('Hooks/use-focus-within', () => {
   it('detects focus on child elements as expected', async () => {
     const onBlur = jest.fn();
     const onFocus = jest.fn();

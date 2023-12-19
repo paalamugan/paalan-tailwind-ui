@@ -19,7 +19,7 @@ import { disableStorybookArgTypes } from '@/utils/helper';
 import { Box } from './Box';
 
 const meta: Meta<typeof Box> = {
-  title: 'layouts/Box',
+  title: 'Layouts/Box',
   component: Box,
   tags: ['autodocs'],
   argTypes: {

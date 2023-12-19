@@ -9,7 +9,7 @@ import { Box } from '@/layouts';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './Collapsible';
 
 const meta: Meta<typeof Collapsible> = {
-  title: 'components/Collapsible',
+  title: 'Components/Collapsible',
   component: Collapsible,
   tags: ['autodocs'],
   parameters: {

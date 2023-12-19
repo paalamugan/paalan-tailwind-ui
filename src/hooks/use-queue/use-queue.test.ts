@@ -2,7 +2,7 @@ import { act, renderHook } from '@testing-library/react';
 
 import { useQueue } from './use-queue';
 
-describe('hooks/use-queue', () => {
+describe('Hooks/use-queue', () => {
   it('correctly distributes initial values when limit is not reached', () => {
     const hook = renderHook(() => useQueue({ initialValues: [1], limit: 2 }));
     expect(hook.result.current.state).toStrictEqual([1]);

@@ -4,7 +4,7 @@ import { Box, Heading, Stack, Strong, Text } from '@/layouts';
 
 import { useShortcut } from './use-shortcut';
 
-export default { title: 'hooks/Utilities/useShortcut' };
+export default { title: 'Hooks/Utilities/useShortcut' };
 
 export function Usage() {
   const onKeyDown = useShortcut({ timeout: 300, preventDefault: () => true });

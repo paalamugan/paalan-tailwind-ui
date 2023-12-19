@@ -5,7 +5,7 @@ import { Box } from '../Box';
 import boxStories from '../Box/Box.stories';
 
 const meta: Meta<typeof Center> = {
-  title: 'layouts/Center',
+  title: 'Layouts/Center',
   component: Center,
   tags: ['autodocs'],
   argTypes: {

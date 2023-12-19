@@ -11,7 +11,7 @@ import { toast } from '../Toast';
 import { Form } from './Form';
 
 const meta: Meta<typeof Form> = {
-  title: 'components/Form',
+  title: 'Components/Form',
   component: Form,
   tags: ['autodocs'],
   argTypes: {

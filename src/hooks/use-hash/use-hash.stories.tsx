@@ -4,7 +4,7 @@ import { randomId } from '@/utils';
 
 import { useHash } from './use-hash';
 
-export default { title: 'hooks/Utilities/useHash' };
+export default { title: 'Hooks/Utilities/useHash' };
 
 export function Usage() {
   const [hash, setHash] = useHash();

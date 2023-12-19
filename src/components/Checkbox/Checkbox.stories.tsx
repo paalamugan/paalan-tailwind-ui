@@ -13,7 +13,7 @@ import { toast } from '../Toast';
 import { Checkbox } from './Checkbox';
 
 const meta: Meta<typeof Checkbox> = {
-  title: 'components/Checkbox',
+  title: 'Components/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {

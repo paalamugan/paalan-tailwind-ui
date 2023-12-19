@@ -5,7 +5,7 @@ import { Heading, Stack, Strong, Text } from '@/layouts';
 import { useEventListener } from './use-event-listener';
 
 export default {
-  title: 'hooks/UI And Dom/useEventListener',
+  title: 'Hooks/UI And Dom/useEventListener',
 };
 
 export function Usage() {

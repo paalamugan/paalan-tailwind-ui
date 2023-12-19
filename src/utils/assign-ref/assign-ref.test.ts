@@ -2,7 +2,7 @@ import { createRef } from 'react';
 
 import { assignRef } from './assign-ref';
 
-describe('hooks/assignRef', () => {
+describe('Hooks/assignRef', () => {
   it('assigns function ref', () => {
     const spy = jest.fn();
     assignRef(spy, 'test-ref');

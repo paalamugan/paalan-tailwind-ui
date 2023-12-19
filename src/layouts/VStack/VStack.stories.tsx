@@ -5,7 +5,7 @@ import boxStories from '../Box/Box.stories';
 import { VStack } from './VStack';
 
 const meta: Meta<typeof VStack> = {
-  title: 'layouts/VStack',
+  title: 'Layouts/VStack',
   component: VStack,
   tags: ['autodocs'],
   argTypes: {

@@ -14,7 +14,7 @@ const Target: React.FunctionComponent = () => {
   );
 };
 
-describe('hooks/use-hover', () => {
+describe('Hooks/use-hover', () => {
   it('changes `hovered` on mouseenter/mouseleave correctly', () => {
     render(<Target />);
     const target = screen.getByTestId('target');

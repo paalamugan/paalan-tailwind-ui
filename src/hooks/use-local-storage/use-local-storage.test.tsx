@@ -10,7 +10,7 @@ type WrapperProps = {
   value?: string;
 };
 
-describe('hooks/use-local-storage', () => {
+describe('Hooks/use-local-storage', () => {
   function WrapperComponent({ storageKey, defaultValue, value: userValue }: WrapperProps) {
     const [value, setValue] = useLocalStorage({ key: storageKey, defaultValue });
     useEffect(() => {

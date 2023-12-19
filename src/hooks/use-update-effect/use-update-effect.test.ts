@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 import { useUpdateEffect } from './use-update-effect';
 
-describe('hooks/use-update-effect', () => {
+describe('Hooks/use-update-effect', () => {
   afterAll(() => {
     jest.clearAllMocks();
   });

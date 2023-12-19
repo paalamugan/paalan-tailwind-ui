@@ -7,7 +7,7 @@ import { LI, P, UL } from '@/layouts/Typography';
 import { useClickOutside } from './use-click-outside';
 
 export default {
-  title: 'hooks/UI And Dom/useClickOutside',
+  title: 'Hooks/UI And Dom/useClickOutside',
 };
 
 export function Usage() {

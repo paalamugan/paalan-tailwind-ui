@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { SimpleTable } from './SimpleTable';
 
 const meta: Meta<typeof SimpleTable> = {
-  title: 'components/SimpleTable',
+  title: 'Components/SimpleTable',
   component: SimpleTable,
   tags: ['autodocs'],
 };

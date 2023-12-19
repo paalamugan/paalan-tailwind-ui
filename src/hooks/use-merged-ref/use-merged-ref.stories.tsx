@@ -6,7 +6,7 @@ import { useClickOutside } from '../use-click-outside';
 import { useFocusTrap } from '../use-focus-trap';
 import { mergeRefs, useMergedRef } from '../use-merged-ref';
 
-export default { title: 'hooks/Utilities/useMergedRef' };
+export default { title: 'Hooks/Utilities/useMergedRef' };
 
 export function Usage() {
   const myRef = useRef(null);

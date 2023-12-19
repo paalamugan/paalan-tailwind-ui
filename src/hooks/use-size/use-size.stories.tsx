@@ -5,7 +5,7 @@ import { H2, P } from '@/layouts/Typography';
 
 import { useSize } from './use-size';
 
-export default { title: 'hooks/UI And Dom/useSize' };
+export default { title: 'Hooks/UI And Dom/useSize' };
 
 export function Usage() {
   const ref = useRef<HTMLDivElement>(null);

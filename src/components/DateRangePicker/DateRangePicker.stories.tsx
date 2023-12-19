@@ -5,7 +5,7 @@ import { add } from 'date-fns';
 import { DateRangePicker } from './DateRangePicker';
 
 const meta: Meta<typeof DateRangePicker> = {
-  title: 'components/DateRangePicker',
+  title: 'Components/DateRangePicker',
   component: DateRangePicker,
   tags: ['autodocs'],
   parameters: {

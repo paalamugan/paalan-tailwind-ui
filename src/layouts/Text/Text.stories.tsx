@@ -4,7 +4,7 @@ import { Text } from '.';
 import boxStories from '../Box/Box.stories';
 
 const meta: Meta<typeof Text> = {
-  title: 'layouts/Text',
+  title: 'Layouts/Text',
   component: Text,
   tags: ['autodocs'],
   argTypes: {

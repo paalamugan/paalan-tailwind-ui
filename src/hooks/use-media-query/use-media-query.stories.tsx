@@ -2,7 +2,7 @@ import { Badge } from '@/components/Badge';
 
 import { useMediaQuery } from './use-media-query';
 
-export default { title: 'hooks/UI And Dom/useMediaQuery' };
+export default { title: 'Hooks/UI And Dom/useMediaQuery' };
 
 export function Usage() {
   const matches = useMediaQuery('(min-width: 56.25em)');

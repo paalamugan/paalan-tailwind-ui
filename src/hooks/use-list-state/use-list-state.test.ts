@@ -11,7 +11,7 @@ const TEST_STATE = [
 const TEST_ITEM_1 = { name: 'Emily', age: 18, skills: ['Lua', 'Haskell'] };
 const TEST_ITEM_2 = { name: 'Bob', age: 44, skills: ['Angular', 'TypeScript'] };
 
-describe('hooks/use-list-state', () => {
+describe('Hooks/use-list-state', () => {
   it('returns initial state of no modifications were applied', () => {
     const hook = renderHook(() => useListState(TEST_STATE));
     const [state] = hook.result.current;

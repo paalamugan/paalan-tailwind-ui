@@ -4,7 +4,7 @@ import { Box, Center, Code, Text } from '@/layouts';
 
 import { useMove } from './use-move';
 
-export default { title: 'hooks/UI And Dom/useMove' };
+export default { title: 'Hooks/UI And Dom/useMove' };
 
 export function Usage() {
   const [value, setValue] = useState({ x: 0.2, y: 0.6 });

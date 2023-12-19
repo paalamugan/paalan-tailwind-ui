@@ -2,7 +2,7 @@ import { Badge } from '@/components/Badge';
 
 import { useReducedMotion } from './use-reduced-motion';
 
-export default { title: 'hooks/UI And Dom/useReducedMotion' };
+export default { title: 'Hooks/UI And Dom/useReducedMotion' };
 
 export function Usage() {
   const reduceMotion = useReducedMotion();

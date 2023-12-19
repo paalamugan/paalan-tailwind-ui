@@ -5,7 +5,7 @@ import boxStories from '../Box/Box.stories';
 import { Stack } from './Stack';
 
 const meta: Meta<typeof Stack> = {
-  title: 'layouts/Stack',
+  title: 'Layouts/Stack',
   component: Stack,
   tags: ['autodocs'],
   argTypes: {

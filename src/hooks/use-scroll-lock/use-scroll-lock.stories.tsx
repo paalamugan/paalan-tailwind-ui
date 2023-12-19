@@ -3,7 +3,7 @@ import { Box, Heading, P, Strong } from '@/layouts';
 
 import { useScrollLock } from './use-scroll-lock';
 
-export default { title: 'hooks/UI And Dom/useScrollLock' };
+export default { title: 'Hooks/UI And Dom/useScrollLock' };
 
 export function Usage() {
   const [scrollLocked, setScrollLocked] = useScrollLock();

@@ -6,7 +6,7 @@ import { Heading } from '../Heading';
 import { Text } from '../Text';
 
 const meta: Meta<typeof Container> = {
-  title: 'layouts/Container',
+  title: 'Layouts/Container',
   component: Container,
   tags: ['autodocs'],
   argTypes: {

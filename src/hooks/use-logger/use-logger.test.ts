@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 import { useLogger } from './use-logger';
 
-describe('hooks/use-logger', () => {
+describe('Hooks/use-logger', () => {
   it('logs mount and unmount events', () => {
     const log = jest.spyOn(console, 'log').mockImplementation(() => {});
     const data = { foo: 'bar' };

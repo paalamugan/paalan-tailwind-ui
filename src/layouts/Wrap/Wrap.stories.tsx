@@ -7,7 +7,7 @@ import { Center } from '../Center';
 import { Wrap, WrapItem } from './Wrap';
 
 const meta: Meta<typeof Wrap> = {
-  title: 'layouts/Wrap',
+  title: 'Layouts/Wrap',
   component: Wrap,
   tags: ['autodocs'],
   argTypes: {

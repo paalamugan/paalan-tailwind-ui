@@ -5,7 +5,7 @@ import { Box } from '@/layouts';
 import { Skeleton, SkeletonItem } from './Skeleton';
 
 const meta: Meta<typeof Skeleton> = {
-  title: 'components/Skeleton',
+  title: 'Components/Skeleton',
   component: Skeleton,
   tags: ['autodocs'],
   argTypes: {},

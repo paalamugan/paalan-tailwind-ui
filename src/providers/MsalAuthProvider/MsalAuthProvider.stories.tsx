@@ -12,7 +12,7 @@ import { useMsalAuth } from './context';
 import { MsalAuthProvider } from './MsalAuthProvider';
 
 const meta = {
-  title: 'providers/MsalAuthProvider',
+  title: 'Providers/MsalAuthProvider',
   component: MsalAuthProvider,
   parameters: {
     controls: { hideNoControlsWarning: true, sort: 'requiredFirst', exclude: ['auth', 'cache', 'system', 'telemetry'] },

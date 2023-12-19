@@ -1,7 +1,7 @@
 import { useConst } from './use-const';
 
 export default {
-  title: 'hooks/State Management/useConst',
+  title: 'Hooks/State Management/useConst',
 };
 
 export function WithValue() {

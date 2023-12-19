@@ -3,7 +3,7 @@ import { Input, Label } from '@/components';
 import { useControllableState } from './use-controllable';
 
 export default {
-  title: 'hooks/State Management/useControllable',
+  title: 'Hooks/State Management/useControllable',
 };
 
 export function Controlled() {

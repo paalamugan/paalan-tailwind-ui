@@ -3,7 +3,7 @@ import { Observable } from 'zen-observable-ts';
 
 import { useSubscription } from './use-subscription';
 
-describe('hooks/useSubscription', () => {
+describe('Hooks/useSubscription', () => {
   it('should call onSuccess when all observables emit at least once', async () => {
     const observable1 = new Observable((observer) => {
       observer.next('observable1');

@@ -3,7 +3,7 @@ import { Box, Stack } from '@/layouts';
 
 import { useFullscreen } from './use-fullscreen';
 
-export default { title: 'hooks/UI And Dom/useFullscreen' };
+export default { title: 'Hooks/UI And Dom/useFullscreen' };
 
 export function Usage() {
   const { toggle, fullscreen } = useFullscreen();

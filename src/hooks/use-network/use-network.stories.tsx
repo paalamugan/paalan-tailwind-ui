@@ -2,7 +2,7 @@ import { Code, Heading, Stack } from '@/layouts';
 
 import { useNetwork } from './use-network';
 
-export default { title: 'hooks/Utilities/useNetwork' };
+export default { title: 'Hooks/Utilities/useNetwork' };
 
 export function Usage() {
   const network = useNetwork();

@@ -4,7 +4,7 @@ import { Grid, GridItem } from '.';
 import boxStories from '../Box/Box.stories';
 
 const meta: Meta<typeof Grid> = {
-  title: 'layouts/Grid',
+  title: 'Layouts/Grid',
   component: Grid,
   tags: ['autodocs'],
   argTypes: {

@@ -5,7 +5,7 @@ import { Code, P, Stack } from '@/layouts';
 
 import { useWindowEvent } from './use-window-event';
 
-export default { title: 'hooks/UI And Dom/useWindowEvent' };
+export default { title: 'Hooks/UI And Dom/useWindowEvent' };
 
 export function Usage() {
   const inputRef = useRef<HTMLInputElement>(null);

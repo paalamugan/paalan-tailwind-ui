@@ -11,7 +11,7 @@ import { toast } from '../Toast';
 import { Combobox } from './Combobox';
 
 const meta: Meta<typeof Combobox> = {
-  title: 'components/Combobox',
+  title: 'Components/Combobox',
   component: Combobox,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

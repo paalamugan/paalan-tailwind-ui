@@ -4,7 +4,7 @@ import { Stack, Strong, Text } from '@/layouts';
 import { useLocalStorage } from './use-local-storage';
 
 export default {
-  title: 'hooks/State Management/useLocalStorage',
+  title: 'Hooks/State Management/useLocalStorage',
 };
 
 export function Usage() {

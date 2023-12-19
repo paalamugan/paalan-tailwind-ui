@@ -6,7 +6,7 @@ import { P, Strong } from '@/layouts/Typography';
 import { useSessionStorage } from './use-session-storage';
 
 export default {
-  title: 'hooks/State Management/useSessionStorage',
+  title: 'Hooks/State Management/useSessionStorage',
 };
 
 export function Usage() {

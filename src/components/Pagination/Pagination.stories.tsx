@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DEFAULT_PAGE_SIZE_OPTIONS, Pagination } from './Pagination';
 
 const meta: Meta<typeof Pagination> = {
-  title: 'components/Pagination',
+  title: 'Components/Pagination',
   component: Pagination,
   tags: ['autodocs'],
   argTypes: {},

@@ -11,7 +11,7 @@ function Target() {
   );
 }
 
-describe('hooks/use-viewport-size', () => {
+describe('Hooks/use-viewport-size', () => {
   it('returns correct initial dimensions', () => {
     // custom window dimensions
     window.innerWidth = 2000;

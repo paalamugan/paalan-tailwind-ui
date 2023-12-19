@@ -7,7 +7,7 @@ const changeEventText = {
   nativeEvent: {},
 };
 
-describe('hooks/use-input-state', () => {
+describe('Hooks/use-input-state', () => {
   it('sets correct initial state', () => {
     const hook = renderHook(() => useInputState('test-value'));
     const [value] = hook.result.current;

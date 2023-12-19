@@ -2,7 +2,7 @@ import { Box, Code, Heading, Text } from '@/layouts';
 
 import { useQueryFetcher } from './use-query-fetcher';
 
-export default { title: 'hooks/Utilities/useQueryFetcher' };
+export default { title: 'Hooks/Utilities/useQueryFetcher' };
 
 const fetcher = async (param: { id: string }) => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${param.id}`);

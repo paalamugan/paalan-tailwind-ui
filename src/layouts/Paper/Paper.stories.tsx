@@ -4,7 +4,7 @@ import { Text } from '../Text';
 import { Paper } from './Paper';
 
 const meta: Meta<typeof Paper> = {
-  title: 'layouts/Paper',
+  title: 'Layouts/Paper',
   component: Paper,
   tags: ['autodocs'],
 };

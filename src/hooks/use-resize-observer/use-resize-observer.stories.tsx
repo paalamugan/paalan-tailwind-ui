@@ -3,7 +3,7 @@ import { Center, Code, Text } from '@/layouts';
 
 import { useResizeObserver } from './use-resize-observer';
 
-export default { title: 'hooks/UI And Dom/useResizeObserver' };
+export default { title: 'Hooks/UI And Dom/useResizeObserver' };
 
 export function Usage() {
   const [ref, rect] = useResizeObserver<HTMLTextAreaElement>();

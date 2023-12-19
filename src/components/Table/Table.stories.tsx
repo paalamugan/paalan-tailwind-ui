@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from './Table';
 
 const meta: Meta<typeof Table> = {
-  title: 'components/Table',
+  title: 'Components/Table',
   component: Table,
   tags: ['autodocs'],
   argTypes: {},

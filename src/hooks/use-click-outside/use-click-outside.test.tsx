@@ -18,7 +18,7 @@ const Target: React.FunctionComponent<UseClickOutsideProps> = ({ handler, events
   return <div data-testid="target" ref={ref} />;
 };
 
-describe('hooks/use-click-outside', () => {
+describe('Hooks/use-click-outside', () => {
   afterAll(() => {
     jest.clearAllMocks();
   });

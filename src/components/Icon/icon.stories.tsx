@@ -6,7 +6,7 @@ import boxStories from '@/layouts/Box/Box.stories';
 import { createIcon, Icon } from '.';
 
 export default {
-  title: 'components/Icon',
+  title: 'Components/Icon',
   component: Icon,
   tags: ['autodocs'],
   argTypes: {

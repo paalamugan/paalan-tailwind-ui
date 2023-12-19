@@ -4,7 +4,7 @@ import { Heading } from '.';
 import boxStories from '../Box/Box.stories';
 
 const meta: Meta<typeof Heading> = {
-  title: 'layouts/Heading',
+  title: 'Layouts/Heading',
   component: Heading,
   tags: ['autodocs'],
   argTypes: {

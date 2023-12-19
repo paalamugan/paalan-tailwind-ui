@@ -3,7 +3,7 @@ import { Flex, Heading, Stack } from '@/layouts';
 
 import { useLatestRef } from './use-latest-ref';
 
-export default { title: 'hooks/State Management/useLatestRef' };
+export default { title: 'Hooks/State Management/useLatestRef' };
 
 export function Usage() {
   const ref = useLatestRef(0);

@@ -5,7 +5,7 @@ import boxStories from '../Box/Box.stories';
 import { Flex } from './Flex';
 
 const meta: Meta<typeof Flex> = {
-  title: 'layouts/Flex',
+  title: 'Layouts/Flex',
   component: Flex,
   tags: ['autodocs'],
   argTypes: {
