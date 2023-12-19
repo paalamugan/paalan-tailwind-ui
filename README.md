@@ -18,6 +18,15 @@ nvm install 16 && nvm use 16
 npm install @paalan/tailwind-ui
 ```
 
+## Quick Links
+
+- [Layouts](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/layouts-box--docs)
+- [Components](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/components-accordion--docs)
+- [Icons](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/icons-all-icons--docs)
+- [Colors](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/system-colors--docs)
+- [Hooks](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/hooks-state-management-usecallbackref--documentation)
+- [Providers](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/providers-themeprovider--docs)
+
 ## Usage
 
 - Import the `tailwindConfig` configuration from `@paalan/tailwind-ui/config` in your application. Copy the below content and paste it in your application `tailwind.config.js` file.
@@ -149,28 +158,3 @@ import { AccessibilityIcon } from '@paalan/tailwind-ui/icons';
 
 <AccessibilityIcon boxSize="4" />;
 ```
-
-- Import the solid icons you need from `@paalan/tailwind-ui/icons/solid`. These icons are from [heroicons](https://heroicons.com/). So you can't use the `boxSize` prop on these icons.
-
-```jsx
-import { AcademicCapIcon } from '@paalan/tailwind-ui/icons/solid';
-
-<AcademicCapIcon className="h-4 w-4" />;
-```
-
-- Import the outline icons you need from `@paalan/tailwind-ui/icons/outline`. These icons are from [heroicons](https://heroicons.com/). So you can't use the `boxSize` prop on these icons.
-
-```jsx
-import { AcademicCapIcon } from '@paalan/tailwind-ui/icons/outline';
-
-<AcademicCapIcon className="h-4 w-4" />;
-```
-
-## Documentation
-
-- [Layouts](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/layouts-box--docs)
-- [Components](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/components-accordion--docs)
-- [Icons](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/system-icons--docs)
-- [Colors](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/system-colors--docs)
-- [Hooks](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/hooks-state-management-usecallbackref--documentation)
-- [Providers](https://tailwind-ui-storybook.paalamugan.com/?path=/docs/providers-themeprovider--docs)

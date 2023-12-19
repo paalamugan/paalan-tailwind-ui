@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import * as AllIconLists from '.';
 import { Input } from '../components/Input';
-import { Grid, Heading, Text, VStack } from '../layouts';
+import { Grid, Text, VStack } from '../layouts';
 
 export default {
-  title: 'icons/AllIcons',
+  title: 'icons/All Icons',
   tags: ['autodocs'],
   parameters: {
     controls: { disable: true }, // Hide the controls from the Canvas
@@ -34,7 +34,9 @@ export function AllIcons() {
       <Input placeholder="Search icon" onChange={onValueChange} />
 
       <VStack mb="6">
-        <Heading as="h2">All Icons</Heading>
+        <Text fontSize="xl" className="font-bold">
+          {filteredIconRecords.length} icons
+        </Text>
         <Grid gap="8" className="grid-cols-[repeat(auto-fill,minmax(13rem,1fr))]">
           {filteredIconRecords.map(([key, value]) => {
             const IconComponent = value;
