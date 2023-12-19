@@ -26,7 +26,7 @@
     "test:watch": "npm run test -- --watch",
     "storybook": "storybook dev -p 6006",
     "storybook:docs": "storybook dev -p 6007 --docs",
-    "storybook:build": "cross-env NODE_OPTIONS=\"--max-old-space-size=8096\" storybook build",
+    "storybook:build": "cross-env NODE_OPTIONS=\"--max-old-space-size=9096\" storybook build",
     "storybook:build:docs": "npm run storybook:build -- --docs",
     "storybook:test": "test-storybook",
     "storybook:test:watch": "npm run storybook:test -- --watch",
