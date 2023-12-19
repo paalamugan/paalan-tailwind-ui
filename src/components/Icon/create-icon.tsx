@@ -3,6 +3,7 @@ import { Children } from 'react';
 import type { IconProps } from './icon';
 
 import { forwardRef } from '@/utils/forward-ref';
+import { cn } from '@/utils/helper';
 
 import { Icon } from './icon';
 
@@ -35,9 +36,9 @@ export const createIcon = (options: CreateIconOptions) => {
   const { viewBox = '0 0 24 24', d: pathDefinition, displayName, defaultProps = {} } = options;
   const path = Children.toArray(options.path);
 
-  const Comp = forwardRef<IconProps, 'svg'>((props, ref) => {
+  const Comp = forwardRef<IconProps, 'svg'>(({ className, ...props }, ref) => {
     return (
-      <Icon ref={ref} viewBox={viewBox} {...defaultProps} {...props}>
+      <Icon ref={ref} viewBox={viewBox} {...defaultProps} {...props} className={cn(defaultProps.className, className)}>
         {path.length ? path : <path fill="currentColor" d={pathDefinition} />}
       </Icon>
     );

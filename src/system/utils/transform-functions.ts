@@ -59,6 +59,7 @@ export const transformFunctions = {
       const themeValue =
         themeConfig[tailwindClass as keyof TailwindGeneratedTheme] ??
         themeConfig[supportedClass as keyof TailwindGeneratedTheme];
+
       // tailwindTheme.margin
       if (!themeValue) continue; // If there is no such property in the theme, continue to the next iteration
       const isValid = themeValue[tailwindClassValue as keyof typeof themeValue]; // tailwindTheme.margin[100], tailwindTheme.margin[100]

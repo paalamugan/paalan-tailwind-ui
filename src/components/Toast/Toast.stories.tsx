@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import { CheckCircleIcon } from '@/icons';
 
 import { toast, Toaster } from '.';
 import { Button } from '../Button';

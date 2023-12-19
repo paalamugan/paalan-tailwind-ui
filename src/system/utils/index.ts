@@ -27,6 +27,9 @@ export const t = {
     return { prefix, transform };
   },
   tailwind: toTailwindConfig(transforms.tailwind),
+  /**
+   * *This function is used to remove "DEFAULT" value from tailwind class.
+   */
   tailwindT: toTailwindConfig((value: string | number) => {
     const finalValue = `${value}`.replace('-DEFAULT', '');
     return finalValue;

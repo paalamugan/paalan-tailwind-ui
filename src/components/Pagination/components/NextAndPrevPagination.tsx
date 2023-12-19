@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { Button } from '@/components/Button';
-import { ChevronLeftIcon, ChevronRightIcon } from '@/icons/outline';
+import { ChevronLeftIcon, ChevronRightIcon } from '@/icons';
 import { Flex, HStack } from '@/layouts';
 
 export interface NextAndPrevPaginationProps {

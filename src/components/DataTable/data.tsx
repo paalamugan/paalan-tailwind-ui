@@ -9,7 +9,7 @@ import {
   CrossCircledIcon,
   QuestionMarkCircledIcon,
   StopwatchIcon,
-} from '@/icons/custom';
+} from '@/icons/icons';
 
 export const labels = [
   {

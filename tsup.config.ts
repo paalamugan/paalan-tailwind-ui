@@ -5,7 +5,7 @@ export default defineConfig(() => {
   return {
     splitting: false,
     entry: ['src/**/*.{ts,tsx}', '!src/**/*.test.{ts,tsx}', '!src/**/*.stories.{ts,tsx}'],
-    external: ['react', 'react-dom', 'react-router-dom', '@heroicons/react'],
+    external: ['react', 'react-dom', 'react-router-dom'],
     format: ['esm', 'cjs'],
     target: 'esnext',
     outDir: 'dist',

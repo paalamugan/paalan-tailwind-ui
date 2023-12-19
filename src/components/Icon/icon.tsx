@@ -1,4 +1,4 @@
-import type { BoxProps } from '@/layouts';
+import type { HTMLTailwindStyledComponentProps } from '@/types';
 
 import { Box } from '@/layouts';
 import { forwardRef } from '@/utils/forward-ref';
@@ -17,8 +17,14 @@ const fallbackIcon = {
 
 type Orientation = 'vertical' | 'horizontal';
 
-export interface IconProps extends BoxProps {
+export interface IconProps extends HTMLTailwindStyledComponentProps<'svg'> {
+  /**
+   * The className of the icon
+   */
   className?: string;
+  /**
+   * The icon orientation
+   */
   orientation?: Orientation;
 }
 
@@ -28,15 +34,15 @@ export interface IconProps extends BoxProps {
 export const Icon = forwardRef<IconProps, 'svg'>((props, ref) => {
   const { as: element, viewBox, focusable = false, children, className, ...rest } = props;
 
-  const _className = cn('icon inline-block h-[1em] w-[1em] shrink-0 leading-[1em]', className);
+  const internalClassName = cn('icon inline-block h-[1em] w-[1em] shrink-0 leading-[1em]', className);
 
   const shared = {
     ref,
     focusable,
-    className: _className,
+    className: internalClassName,
   };
 
-  const _viewBox = viewBox ?? fallbackIcon.viewBox;
+  const internalViewBox = viewBox ?? fallbackIcon.viewBox;
 
   /**
    * If you're using an icon library like `@heroicons/react`.
@@ -50,11 +56,12 @@ export const Icon = forwardRef<IconProps, 'svg'>((props, ref) => {
 
   return (
     <Box
-      as="svg"
-      viewBox={_viewBox}
       {...shared}
-      className={cn('w-[1em] align-middle text-current', shared.className)}
       {...rest}
+      as="svg"
+      data-slot="Icon"
+      viewBox={internalViewBox}
+      className={cn('align-middle text-current', shared.className)}
     >
       {_path}
     </Box>

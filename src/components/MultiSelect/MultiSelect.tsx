@@ -2,10 +2,9 @@ import * as React from 'react';
 
 import type { ComboboxProps } from '../Combobox';
 
-import { XMarkIcon } from '@heroicons/react/24/solid';
-
 import { useCallbackRef } from '@/hooks';
-import { CaretSortIcon } from '@/icons/custom';
+import { XMarkIcon } from '@/icons';
+import { CaretSortIcon } from '@/icons/icons';
 import { Box, Text } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

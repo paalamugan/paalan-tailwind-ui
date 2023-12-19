@@ -5,8 +5,7 @@ import type { ColorVariant } from '@/constants';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { cva } from 'class-variance-authority';
 
-import { CheckIcon } from '@/icons/custom';
-import { MinusIcon } from '@/icons/solid';
+import { CheckIcon, MinusIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

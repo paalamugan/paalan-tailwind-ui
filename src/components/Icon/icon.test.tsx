@@ -1,5 +1,4 @@
-import { RocketLaunchIcon } from '@heroicons/react/24/solid';
-
+import { RocketLaunchIcon } from '@/icons';
 import { testA11y } from '@/test-utils';
 
 import { Icon } from './icon';

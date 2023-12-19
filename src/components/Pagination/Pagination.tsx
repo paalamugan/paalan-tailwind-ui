@@ -5,7 +5,7 @@ import type { BoxProps } from '@/layouts';
 import type { ReactNode } from 'react';
 
 import { usePagination } from '@/hooks/use-pagination';
-import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, ChevronLeftIcon, ChevronRightIcon } from '@/icons/outline';
+import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, ChevronLeftIcon, ChevronRightIcon } from '@/icons';
 import { Box, Strong, Text } from '@/layouts';
 import { cn } from '@/utils';
 

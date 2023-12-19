@@ -1,9 +1,9 @@
 import type { ToastTypes } from './types';
 
-import { ErrorIcon } from '@/icons/custom/ErrorIcon';
-import { InfoIcon1 } from '@/icons/custom/InfoIcon1';
-import { SuccessIcon } from '@/icons/custom/SuccessIcon';
-import { WarningIcon1 } from '@/icons/custom/WarningIcon1';
+import { ErrorIcon } from '@/icons/icons/ErrorIcon';
+import { InfoIcon1 } from '@/icons/icons/InfoIcon1';
+import { SuccessIcon } from '@/icons/icons/SuccessIcon';
+import { WarningIcon1 } from '@/icons/icons/WarningIcon1';
 
 const bars = Array(12).fill(0);
 

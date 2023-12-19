@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import type { DateRange } from 'react-day-picker';
 
-import { XCircleIcon } from '@heroicons/react/24/outline';
 import { format } from 'date-fns';
 
 import { Button } from '@/components/Button';
 import { Calendar } from '@/components/Calendar';
 import { PopoverContent, PopoverRoot, PopoverTrigger } from '@/components/Popover';
-import { CalendarIcon } from '@/icons/custom';
+import { XCircleIcon } from '@/icons';
+import { CalendarIcon } from '@/icons/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 
@@ -149,7 +149,7 @@ export const DateRangePicker = React.forwardRef<HTMLButtonElement, DateRangePick
                         e.stopPropagation();
                         onSelect(undefined);
                       }}
-                      title="Clear date range"
+                      xlinkTitle="Clear date range"
                       className={cn('ml-auto h-5 w-5 text-muted-foreground', {
                         'text-danger': isInvalid,
                       })}

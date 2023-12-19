@@ -8,7 +8,7 @@ import { format } from 'date-fns';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
 
-import { CalendarIcon } from '@/icons/custom';
+import { CalendarIcon } from '@/icons/icons';
 import { cn } from '@/utils/helper';
 
 import { Button } from '../Button';

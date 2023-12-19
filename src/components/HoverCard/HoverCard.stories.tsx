@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CalendarIcon } from '@heroicons/react/24/outline';
-
+import { CalendarIcon } from '@/icons';
 import { Box, Heading, Text } from '@/layouts';
 
 import { Avatar } from '../Avatar';

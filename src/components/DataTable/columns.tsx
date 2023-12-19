@@ -2,7 +2,7 @@ import type { ColumnDef } from '@tanstack/react-table';
 import type { Task } from './data';
 import type { TableActionItem } from './types';
 
-import { TrashIcon } from '@/icons/custom';
+import { TrashIcon } from '@/icons/icons';
 
 import { Badge } from '../Badge';
 import { labels, priorities, statuses, taskSchema } from './data';

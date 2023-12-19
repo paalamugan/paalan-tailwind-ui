@@ -5,11 +5,11 @@ import type { ControllerProps, FieldPath, FieldValues, Path, useForm } from 'rea
 import type { ButtonProps } from '../Button';
 import type { FormItemField } from './types';
 
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { Slot } from '@radix-ui/react-slot';
 import { Controller, FormProvider as OriginalFormProvider, useFormContext } from 'react-hook-form';
 
 import { Label } from '@/components/Label/Label';
+import { ArrowPathIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { cn } from '@/utils/helper';
 

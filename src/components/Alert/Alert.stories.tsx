@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { COLOR_VARIANTS } from '@/constants';
-import { RocketIcon } from '@/icons/custom';
+import { RocketIcon } from '@/icons/icons';
 
 import { Alert } from './Alert';
 

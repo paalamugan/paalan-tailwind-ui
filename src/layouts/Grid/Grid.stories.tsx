@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   render: (args) => (
-    <Grid {...args} gap="3" className="grid-cols-4">
+    <Grid gap="3" gridCols="4" {...args}>
       {Array.from({ length: 10 }).map((_, i) => (
         <GridItem key={i} className="bg-blue-600 text-white" p="4">
           Grid Item {i + 1}

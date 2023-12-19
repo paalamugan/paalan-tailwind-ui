@@ -1,7 +1,7 @@
 import type { Table } from '@tanstack/react-table';
 import type { TableFacetFilterColumn, TableSearchFilterColumn } from './types';
 
-import { Cross2Icon } from '@/icons/custom';
+import { Cross2Icon } from '@/icons/icons';
 
 import { Button } from '../Button';
 import { Input } from '../Input';

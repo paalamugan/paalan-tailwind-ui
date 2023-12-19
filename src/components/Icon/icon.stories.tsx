@@ -1,7 +1,6 @@
 import type { IconProps } from '.';
 
-import { RocketLaunchIcon } from '@heroicons/react/24/solid';
-
+import { RocketLaunchIcon } from '@/icons';
 import boxStories from '@/layouts/Box/Box.stories';
 
 import { createIcon, Icon } from '.';

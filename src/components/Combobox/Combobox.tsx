@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import type { OptionType } from '@/types';
 import type { PopoverModalContentProps } from '../Popover/components';
 
-import { CaretSortIcon } from '@/icons/custom';
+import { CaretSortIcon } from '@/icons/icons';
 import { Box, Text } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

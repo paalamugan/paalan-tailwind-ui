@@ -4,10 +4,10 @@ import type { VariantProps } from 'class-variance-authority';
 import type * as React from 'react';
 import type { ButtonVariant } from './constants';
 
-import { ArrowPathIcon } from '@heroicons/react/24/solid';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 
+import { ArrowPathIcon } from '@/icons';
 import { Box } from '@/layouts';
 import { forwardRef } from '@/utils';
 import { cn } from '@/utils/helper';

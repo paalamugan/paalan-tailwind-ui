@@ -5,7 +5,7 @@ import type { SelectOption, SelectOptionGroupType } from './types';
 import * as SelectPrimitive from '@radix-ui/react-select';
 
 import { useCallbackRef } from '@/hooks';
-import { CaretSortIcon, CheckIcon } from '@/icons/custom';
+import { CaretSortIcon, CheckIcon } from '@/icons/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 

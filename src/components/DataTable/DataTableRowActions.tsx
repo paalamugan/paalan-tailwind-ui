@@ -17,7 +17,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/DropdownMenu';
-import { DotsHorizontalIcon } from '@/icons/custom';
+import { DotsHorizontalIcon } from '@/icons/icons';
 
 import { Button } from '../Button';
 

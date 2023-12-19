@@ -5,7 +5,7 @@ import type { VariantProps } from 'class-variance-authority';
 
 import { cva } from 'class-variance-authority';
 
-import { SolidCloseIcon } from '@/icons/custom';
+import { SolidCloseIcon } from '@/icons/icons';
 import { Box } from '@/layouts';
 import { cn, forwardRef } from '@/utils';
 

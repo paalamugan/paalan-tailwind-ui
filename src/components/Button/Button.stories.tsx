@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { expect } from '@storybook/jest';
 import { userEvent, within } from '@storybook/testing-library';
 
 import { ALL_COLOR_VARIANTS } from '@/constants/colors';
-import { Heading } from '@/layouts';
+import { EnvelopeIcon } from '@/icons';
+import { Flex, Grid, Heading } from '@/layouts';
 
 import { Button } from './Button';
 import { BUTTON_ROUNDED, BUTTON_SIZE, BUTTON_VARIANTS } from './constants';
@@ -147,13 +147,13 @@ export const WithUnstyled: Story = {
 export const WithVariant: Story = {
   render: (args) => {
     return (
-      <div className="grid grid-cols-5 gap-4">
+      <Grid gap="4" gridCols="5">
         {BUTTON_VARIANTS.map((variant) => (
           <Button {...args} variant={variant} key={variant}>
             {variant.charAt(0).toUpperCase() + variant.slice(1)}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
   args: {
@@ -172,13 +172,13 @@ export const WithVariantPrimary: Story = {
 export const WithSolidVariant: Story = {
   render: (args) => {
     return (
-      <div className="grid grid-cols-5 gap-4">
+      <Grid gap="4" gridCols="5">
         {ALL_COLOR_VARIANTS.map((color) => (
           <Button {...args} color={color} key={color}>
             {color.charAt(0).toUpperCase() + color.slice(1)}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
 };
@@ -222,13 +222,13 @@ export const WithSize: Story = {
   render: (args) => {
     const sizes = Object.keys(BUTTON_SIZE) as Array<keyof typeof BUTTON_SIZE>;
     return (
-      <div className="flex flex-row items-center gap-4">
+      <Flex alignItems="center" gap="4" flexDir="row">
         {sizes.map((size) => (
           <Button {...args} size={size} key={size}>
             {size.toUpperCase()}
           </Button>
         ))}
-      </div>
+      </Flex>
     );
   },
 };
@@ -237,13 +237,13 @@ export const WithRounded: Story = {
   render: (args) => {
     const rounds = Object.keys(BUTTON_ROUNDED) as Array<keyof typeof BUTTON_ROUNDED>;
     return (
-      <div className="grid grid-cols-5 items-center gap-4">
+      <Grid gridCols="5" alignItems="center" gap="4">
         {rounds.map((rounded) => (
           <Button {...args} rounded={rounded} key={rounded}>
             {rounded.toUpperCase()}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
 };
@@ -319,13 +319,13 @@ export const WithLoadingSize: Story = {
 export const WithAllColorLoading: Story = {
   render: (args) => {
     return (
-      <div className="grid grid-cols-5 gap-4">
+      <Grid gap="4" gridCols="5">
         {ALL_COLOR_VARIANTS.map((color) => (
           <Button {...args} color={color} key={color}>
             {color.charAt(0).toUpperCase() + color.slice(1)}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
   args: {
@@ -336,13 +336,13 @@ export const WithAllColorLoading: Story = {
 export const WithAllColorLoadingText: Story = {
   render: (args) => {
     return (
-      <div className="grid grid-cols-5 gap-4">
+      <Grid gap="4" gridCols="5">
         {ALL_COLOR_VARIANTS.map((color) => (
           <Button {...args} color={color} key={color}>
             {color.charAt(0).toUpperCase() + color.slice(1)}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
   args: {
@@ -354,13 +354,13 @@ export const WithAllColorLoadingText: Story = {
 export const WithAllColorDisabled: Story = {
   render: (args) => {
     return (
-      <div className="grid grid-cols-5 gap-4">
+      <Grid gap="4" gridCols="5">
         {ALL_COLOR_VARIANTS.map((color) => (
           <Button {...args} color={color} key={color}>
             {color.charAt(0).toUpperCase() + color.slice(1)}
           </Button>
         ))}
-      </div>
+      </Grid>
     );
   },
   args: {
@@ -375,13 +375,13 @@ export const WithAllVariantColor: Story = {
         {BUTTON_VARIANTS.map((variant) => (
           <div className="flex flex-col gap-4">
             <Heading>{variant.charAt(0).toUpperCase() + variant.slice(1)}</Heading>
-            <div className="grid grid-cols-5 gap-4">
+            <Grid gap="4" gridCols="5">
               {ALL_COLOR_VARIANTS.map((color) => (
                 <Button {...args} variant={variant} color={color} key={variant + color}>
                   {variant.charAt(0).toUpperCase() + variant.slice(1)} {color}
                 </Button>
               ))}
-            </div>
+            </Grid>
           </div>
         ))}
       </div>
@@ -396,13 +396,13 @@ export const WithAllVariantColorLoading: Story = {
         {BUTTON_VARIANTS.map((variant) => (
           <div className="flex flex-col gap-4">
             <Heading>{variant.charAt(0).toUpperCase() + variant.slice(1)}</Heading>
-            <div className="grid grid-cols-5 gap-4">
+            <Grid gap="4" gridCols="5">
               {ALL_COLOR_VARIANTS.map((color) => (
                 <Button {...args} variant={variant} color={color} key={variant + color}>
                   {variant.charAt(0).toUpperCase() + variant.slice(1)} {color}
                 </Button>
               ))}
-            </div>
+            </Grid>
           </div>
         ))}
       </div>
@@ -420,13 +420,13 @@ export const WithAllVariantColorDisabled: Story = {
         {BUTTON_VARIANTS.map((variant) => (
           <div className="flex flex-col gap-4">
             <Heading>{variant.charAt(0).toUpperCase() + variant.slice(1)}</Heading>
-            <div className="grid grid-cols-5 gap-4">
+            <Grid gap="4" gridCols="5">
               {ALL_COLOR_VARIANTS.map((color) => (
                 <Button {...args} variant={variant} color={color} key={variant + color}>
                   {variant.charAt(0).toUpperCase() + variant.slice(1)} {color}
                 </Button>
               ))}
-            </div>
+            </Grid>
           </div>
         ))}
       </div>

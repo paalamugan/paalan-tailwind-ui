@@ -13,6 +13,14 @@ export const SUPPORTED_TAILWIND_CLASSES: Array<keyof TailwindStyledTheme> = [
   'order',
   'inset',
   'flex',
+  'gridTemplateColumns',
+  'gridTemplateRows',
+  'gridColumn',
+  'gridRow',
+  'gridColumnStart',
+  'gridColumnEnd',
+  'gridRowStart',
+  'gridRowEnd',
 ];
 
 /**
@@ -20,4 +28,4 @@ export const SUPPORTED_TAILWIND_CLASSES: Array<keyof TailwindStyledTheme> = [
  * *For example, if you add a new property "borderRadius", you must add "rounded" to the regex below.
  */
 export const SUPPORTED_TAILWIND_CLASS_REGEX =
-  /^(p|px|py|pt|pb|pl|pr|pe|ps|m|mx|my|mt|mb|ml|mr|me|ms|w|h|min|max|basis|rounded|gap|order|inset|top|right|bottom|left|flex)-+/;
+  /^(p|px|py|pt|pb|pl|pr|pe|ps|m|mx|my|mt|mb|ml|mr|me|ms|w|h|min|max|basis|rounded|gap|order|inset|top|right|bottom|left|flex|grid-cols|grid-rows|col|row)-+/;

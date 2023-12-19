@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { XCircleIcon } from '@heroicons/react/24/outline';
 import { addDays, format } from 'date-fns';
 
 import { Button } from '@/components/Button';
 import { Calendar } from '@/components/Calendar';
 import { PopoverContent, PopoverRoot, PopoverTrigger } from '@/components/Popover';
-import { CalendarIcon } from '@/icons/custom';
+import { XCircleIcon } from '@/icons';
+import { CalendarIcon } from '@/icons/icons';
 import { Box } from '@/layouts';
 import { cn, isAriaInvalid } from '@/utils/helper';
 
@@ -184,7 +184,7 @@ export const DatePicker = React.forwardRef<HTMLButtonElement, DatePickerProps>(
                       e.stopPropagation();
                       onSelect(undefined);
                     }}
-                    title="Clear date"
+                    xlinkTitle="Clear date"
                     className={cn('ml-auto h-5 w-5 text-muted-foreground', {
                       'text-danger': isInvalid,
                     })}
