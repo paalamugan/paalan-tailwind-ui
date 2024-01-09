@@ -8,11 +8,22 @@ import type { Locale } from 'date-fns';
  */
 export const getDefaultDateFormat = (): string => {
   const now = new Date();
-  let localeDateFormat = now.toLocaleDateString();
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
+  const currentLocaleDate = now.toLocaleDateString(undefined, options);
   const date = now.getDate();
+  const twoDigitDate = `${date}`.length === 1 ? `0${date}` : date;
   const month = now.getMonth() + 1;
+  const twoDigitMonth = `${month}`.length === 1 ? `0${month}` : month;
   const year = now.getFullYear();
-  localeDateFormat = localeDateFormat.replace(`${date}`, 'dd').replace(`${month}`, 'MM').replace(`${year}`, 'yyyy');
+
+  const localeDateFormat = currentLocaleDate
+    .replace(`${twoDigitDate}`, 'dd')
+    .replace(`${twoDigitMonth}`, 'MM')
+    .replace(`${year}`, 'yyyy');
   return localeDateFormat;
 };
 
