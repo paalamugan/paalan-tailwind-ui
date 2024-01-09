@@ -163,7 +163,10 @@ export function DateFormatter() {
             </LI>
             <LI>
               <Strong>Range</Strong>(MinDate - {currentDate.toLocaleDateString()}, MaxDate:{' '}
-              {add2Days.toLocaleDateString()}) - {dateIntl.formatDateTime(dateIntl.range(currentDate, add2Days))}
+              {add2Days.toLocaleDateString()}) - {dateIntl.formatDateTime(dateIntl.range(currentDate, add2Days))}.{' '}
+              <Small color="gray">
+                (Generates a random date within the specified range and returns it as a string representation.)
+              </Small>
             </LI>
           </UL>
         </VStack>
