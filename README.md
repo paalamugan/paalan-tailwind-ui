@@ -4,13 +4,21 @@ This is a collection of React components and hooks that used tailwindcss as CSS 
 
 ![image](https://github.com/paalamugan/paalan-tailwind-ui/assets/42642576/42a40446-a66b-47cb-8c1c-cbdb8ad86df1)
 
-## Installation
+## Pre Requisites
 
-- Node version >= 16.0.0 is required.
+- [Node.js](https://nodejs.org/en/) `version >= 16.0.0` is required. We recommend using [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) to install the node version.
 
 ```bash
-nvm install 16 && nvm use 16
+nvm install 18 && nvm use 18
 ```
+
+- [tailwindcss](https://tailwindcss.com/docs/guides/vite) `version >= 3.0.0` is required.
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+## Installation
 
 - Install the package using npm. This package has peer dependencies on `react`, `react-dom` and `react-router-dom`.
 
@@ -31,6 +39,8 @@ npm install @paalan/tailwind-ui
 
 - Import the `tailwindConfig` configuration from `@paalan/tailwind-ui/config` in your application. Copy the below content and paste it in your application `tailwind.config.js` file.
 
+**Note: If the `tailwind.config.js` file is not exist in your root folder then create one, before paste the below content.**
+
 ```js
 import { tailwindConfig } from '@paalan/tailwind-ui/config';
 
@@ -45,6 +55,8 @@ export default config;
 ```
 
 - Import the styles css file from `@paalan/tailwind-ui/styles.css` in your application. Copy the below content and paste it in your application `index.css` file.
+
+**Note: If the `index.css` file is not exist in your `src` folder then create one, before paste the below content.**
 
 ```css
 @import '@paalan/tailwind-ui/styles.css';
