@@ -17,6 +17,7 @@ import {
   Heading,
   HStack,
   LI,
+  Small,
   Stack,
   Strong,
   TableLayout,
